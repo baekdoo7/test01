@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div style="width: 500px;height: 500px;" >
+<script type="text/javascript">
+/*
+    strIframeId001 = "";    
+
+    if(window.addEventListener){
+        window.addEventListener("message",listener102,false);
+    }
+    else if(window.attatchEvent){
+        window.attachEvent("onmessage",listener102);    
+    }
+    
+function listener102(e){
+    //console.log(e.data);
+    var strMsg = e.data.split("-");
+    if(strMsg.length == 2 && strMsg[0] == "102" ){
+        //console.log(strMsg[1]);
+        //document.getElementById(strIframeId001).contentWindow.document.label_on(strMsg[1],"n");        
+        document.getElementById(strIframeId001).contentWindow.label_on(strMsg[1],"N");        
+        //label_on(strMsg[1],"N");
+        
+    }
+    
+}    
+
+    
+function passback_exec(url){
+    
+    //아이프레임 변수 및 아이프레임 네이밍 
+    var strIframeId   = "adopB" + Math.floor(Math.random()*10000) + 1;
+    var strIframe     = "<iframe id='"+strIframeId+"' frameborder='0' marginwidth='0' marginheight='0' paddingwidth='0' paddingheight='0' scrolling='no' style='width: 100%; height: 100%;' ></iframe>"; //속성추가할것
+    var strScriptLink = "<script src='"+url+"'><\/script>";
+    var strScriptPgm  = "";
+    
+    document.write(strIframe);
+    var passbackIframe = document.getElementById(strIframeId);
+    var passbackIframeDoc = passbackIframe.contentDocument || passbackIframe.contentWindow.document;
+    if(passbackIframeDoc != null){
+        passbackIframeDoc.open();
+        passbackIframeDoc.write(strScriptLink);
+        passbackIframeDoc.close();
+    }    
+}
+
+    passback_exec("http://compasstest.adop.cc/RE/0ad9a8e5-499f-455c-b9db-8bccf9144d7f");
+    //5849645b-be6b-4c20-84ff-02089dc0439b
+    //0ad9a8e5-499f-455c-b9db-8bccf9144d7f
+    
+*/  
+</script>
+<script src="http://compasstest.adop.cc/RC/152056bf-665a-4310-9b32-60da898af9b9" ></script>
+</div>
+
+</body>
+</html>

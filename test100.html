@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="http://www.dt.co.kr/js/jquery.js"></script>
+<script type="application/javascript">
+    var childNo = 0;
+    var stopflag = false;
+    var iCnt    = 1000;
+    var timer01 = '';
+
+function clearDiv(){
+      var pDiv  = document.getElementById("iframe00");
+      
+      //div안에 프레임 삭제
+      while(pDiv.hasChildNodes()){
+        pDiv.removeChild(pDiv.firstChild);
+      } 
+      stoptest(2);
+      autorun();
+}
+function loadtest(){
+     var pDiv  = document.getElementById("iframe00");
+     childNo++;
+     if(childNo > 58){
+        childNo = 0;
+        stoptest(1);
+        clearTimeout(timer01);
+        setTimeout(function(){clearDiv();},1000); 
+        return; 
+ 
+     }
+     if(!stopflag){
+     var oScript = document.createElement("iframe");
+        oScript.src  = "test100_.html";
+        oScript.style = "width:10px;height:10px";
+        pDiv.appendChild(oScript);
+        timer01 = setTimeout(function(){autorun();},iCnt);         
+     }
+}
+function stoptest(tag){
+        if(tag == 1){
+           stopflag = true;
+        }else{
+           stopflag = false;
+        }
+        
+}
+function setCnt(){
+     var pDiv  = document.getElementById("count01");
+     iCnt = parseInt(3600 / pDiv.value  * 1000);
+     //alert(iCnt);
+}    
+function autorun(){
+    //var rndNo = Math.random() * 1000 + 1;
+    if(stopflag){
+        return;
+    }
+    loadtest(); 
+}
+    
+function adconfirm(){
+    var pDiv  = document.getElementById("adframe");
+    adframe.location.reload();
+}    
+//setTimeout(function(){loadtest();},10);    
+    
+</script>    
+<title>광고테스트</title>
+<style>
+    #iframe00 {width: 300px;
+               height: 54px;
+               background-color:#000000;
+               overflow: hidden;
+             }
+</style>
+</head>
+<body>
+<h1>광고테스트...</h1>  
+    <div>
+        시간당 노출수 : <input type="text" id="count01" value="3600" />
+    </div>
+    <div>
+    <button onclick="javascript:adconfirm();">광고확인</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+    <button onclick="javascript:setCnt();autorun();">시작</button>
+    <button onclick="javascript:stoptest(1);">정지</button>
+    <button onclick="javascript:stoptest(2);">계속</button>    
+    </div>
+    <iframe name="adframe" src="test100_.html" style="width:300px;height:250px;"></iframe>
+   
+
+
+    <div id="iframe00"></div>
+... 
+    
+    
+</body>
+</html>

@@ -1,0 +1,2069 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="ko-KR"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="ko-KR"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="ko-KR"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="ko-KR"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko-KR"> <!--<![endif]-->
+
+<head>  
+    <base href="http://cufs.ac.kr/" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1080, initial-scale=1, maximum-scale=2">
+	<meta name="keywords" content="" >
+	<meta name="description" content="">
+	<title>호랑이와 토끼</title>
+	
+	<link type="text/css" rel="stylesheet" href="/css/normalize.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_common.css">
+	<link type="text/css" rel="stylesheet" href="/css/nanumgothic.css">
+	
+		<link type="text/css" rel="stylesheet" href="/css/k2_layout_n.css">
+		
+	
+	<link type="text/css" rel="stylesheet" href="/css/k2_footer.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_main_n.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_guide.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_form.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_login.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_select.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_sub.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_sub_hmm.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_ie.css">
+	<link type="text/css" rel="stylesheet" href="/css/k2_popup.css">
+	<link type="text/css" rel="stylesheet" media="print" href="/css/k2_print.css">
+	
+	<script src="/js/_lib/jquery-latest.js"></script>
+	<script src="/js/_lib/jquery-ui.js"></script>
+	<script src="/js/_lib/jquery.easing.min.js"></script>
+	<script src="/js/_lib/jquery.bxslider.js"></script>
+	<script src="/js/_lib/jquery.selectBoxIt.js"></script>
+	<script src="/js/_lib/jquery.jcarousel.js"></script>
+	
+	<script src="/js/k2_common.js"></script>
+	<script src="/js/k2_layout.js"></script>
+	<script src="/js/k2_main.js"></script>
+	
+	<!--[if lt IE 9]>
+	  <script src="/js/_lib/html5.js"></script>
+	<![endif]-->
+	
+	
+	<script type="text/javascript" src="/new_common/js/n_common.js"></script>
+	<script type="text/javascript" src="/com/jas/common.js"></script>
+	
+	
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="사이버한국외국어대학교 ">
+	<meta property="og:description" content="국내 유일 외국어 특성화 사이버대학교, 사이버한국외국어대학교">
+	<meta property="og:image" content="http://www.cufs.ac.kr/k2_images/main/new/logo.png">
+	<meta property="og:url" content="http://www.cufs.ac.kr/">
+
+
+
+
+
+
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<!--<link rel="stylesheet" type="text/css" href="/new_common/css/board.css" />-->
+	
+	<!--[if IE]><link href="/new_common/css/iehack.css" rel="stylesheet" type="text/css"><![endif]-->
+	
+	<script type="text/javascript" src="/new_common/js/incFlash.js"></script>
+	
+	
+	
+	<!-- S 키워드 트래킹  -->
+	
+	
+	
+	
+	<!-- E 키워드 트래킹  -->
+	<script language='javascript'>
+		var shr_flag = "";
+		function go_search(){
+		
+			var key = document.getElementById("key");
+			if( key.value == "" ){
+				alert('검색어를 입력해주십시오.');
+				return false;
+			}
+			
+			if(shr_flag == ""){
+				document.location.href = "/servlet/SearchServlet?key="+key.value;
+				shr_flag = "Y";
+			}else{
+				alert("검색이 진행중 입니다.\n\n잠시만 기다려 주십시오.");
+			}
+		}
+	
+		function fnKeyPress()
+		{ 
+			//event.returnValue = false;
+			if (event.keyCode == 13)
+			{
+				go_search();
+			}
+		}
+	</script>
+
+
+
+	
+		
+		
+		
+		
+		
+		
+	
+
+
+
+
+
+
+
+<script>
+	/* Layer Cookie set */
+	function set_cookie(name, value, expiredays) {
+		var todayDate = new Date();
+		todayDate.setDate( todayDate.getDate() + expiredays );
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+	
+	cookiedata = document.cookie;
+</script>
+
+
+
+<script>
+/* <![CDATA[ */
+$(document).ready(function(){
+
+		
+			
+			function cufsGNB() {
+				var _this = this;
+				var gnb = $("#gnb");
+				var gnbList = $(">ul#cufsMenu>li", gnb);
+				var gnbListA = $(">a", gnbList);
+				var subList = $(">.gnbSubWrap>.gnbSubList", gnbList);
+				var allA = $("a", gnb);
+				var bgSubLayer = $("#submenuwraper");
+				var bgSubLayerInner = $("#submenuwraper>.submenuArea>.outerWrap>.innerWrap");
+				var isFocus = false;
+				var thisIndex = null;
+				
+				function over() {
+					isFocus = true;
+				}
+				function open() {
+					isFocus = true;
+					var thisIndex = (this.nodeName == "LI") ? $(this).index() : $(this).parent().index();
+					bgSubLayer.show();
+					
+					if (thisIndex == 0) { 
+						bgSubLayerInner.css('height', 230);
+					} else if (thisIndex == 1) { 
+						bgSubLayerInner.css('height', 240);
+					} else if (thisIndex == 2) { 
+						bgSubLayerInner.css('height', 320);
+					} else if (thisIndex == 3) { 
+						bgSubLayerInner.css('height', 230);
+					} else if (thisIndex == 4) { 
+						bgSubLayerInner.css('height', '0');
+					} else if (thisIndex == 5) { 
+						bgSubLayerInner.css('height', 300);
+					} else if (thisIndex == 6) { 
+						bgSubLayerInner.css('height', 110);
+					} else if (thisIndex == 7) { 
+						bgSubLayerInner.css('height', 154);
+					} else {
+						bgSubLayerInner.css('height', '');
+					}
+					subList.each(function(i) {
+						if ( i == thisIndex ) {
+							gnbListA.eq(i).addClass('active');
+							subList.eq(i).show();
+						} else {
+							gnbListA.eq(i).removeClass('active');
+							subList.eq(i).hide();
+						}
+					});
+				}
+				function out() {
+					isFocus = false;
+					setTimeout(function() {
+						if (isFocus == false) {
+							gnbListA.removeClass('active');
+							subList.hide();
+							bgSubLayer.hide();
+						}
+					},100);
+				}
+		
+				gnbList.on({"mouseenter": open, "mouseleave": out});
+				bgSubLayer.on({"mouseenter": over, "mouseleave": out });
+				gnb.on({"mouseenter": over, "mouseleave": out });
+				gnbListA.on("focus", open);
+				allA.on({"focus": over, "blur": out });
+			};
+		
+			$(function() {
+				cufsGNB();
+			});
+		
+		
+});
+/* ]]> */
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1323459094403438'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" src="https://www.facebook.com/tr?id=1323459094403438&ev=PageView&noscript=1" alt="facebook"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+</head>
+<body id="body_main" class="CUFSSUB">
+
+<style>
+#skip a:focus{height:auto;width:100%;padding:5px;margin-bottom:10px;position:absolute;top:0}
+#skip a:active{height:auto;width:100%;padding:5px;margin-bottom:10px;position:absolute;top:0}
+#skip a:hover{height:auto;width:100%;padding:5px;margin-bottom:10px;position:absolute;top:0}
+</style>
+
+	
+<div id="skip">
+	<h2 class="hidden">Skip Navigation</h2>
+	<ul>
+		<li><a href="#gnb" onclick="document.getElementById('gnb').tabIndex = -1;document.getElementById('gnb').focus();return false;">주메뉴 바로가기</a></li>
+	
+		<li><a href="#article" onclick="document.getElementById('article').tabIndex = -1;document.getElementById('article').focus();return false;">컨텐츠 바로가기</a></li>
+		<li class="subSkipcontents"><a href="#asideSubmenuWrap" onclick="document.getElementById('asideSubmenuWrap').tabIndex = -1;document.getElementById('asideSubmenuWrap').focus();return false;">서브메뉴 바로가기</a></li>
+		
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="wrap">
+	
+	
+	
+	<div id="wrapHeader">
+		<div id="header">
+				<div class="wrap">
+					<h1 id="logo">
+						
+						
+							<a href="/index_bottom.jsp"><img src="/k2_images/main/new/logo.png" alt="사이버한국외국어대학교 - CYBER HANKUK UNIVERSITY OF FOREIGN STUDIES"></a>
+						
+					</h1>
+					
+							
+									<div class="section utilList">
+									<h2 class="hidden">util</h2>
+									<ul>
+											<!-- li><a href="/index_bottom.jsp?tabFocus=univ" class="util" id="goHome">대학홈</a></li-->
+											<li><a href="/index_bottom.jsp" class="util" id="goHome">대학홈</a></li>
+											<li>
+											
+													<a href="/com/s_com_commlgin.jsp" class="util">로그인</a>
+												
+											</li>
+											
+											<li><a href="#none" onclick="javascript:openOutlook();" class="util" title="새창">CUFS mail</a></li>
+											<li class="last"><a href="/clf/hlp/clfhlp_helpcont.jsp" class="util">Helpdesk</a></li>
+											
+										</ul>
+									</div>	
+								
+							
+					
+					
+					<div class="section" id="linkList">
+						<h2 class="hidden">links</h2>
+						<dl>
+							<dt>
+								<button id="linkListOpen" class="linkListHandler">language <em>열기</em></button>
+								<button id="linkListClose" class="linkListHandler">language <em>닫기</em></button>
+							</dt>
+							<dd>
+								<ul>
+									<li><a href="/eng/" target="_blank" title="새창">English</a></li>
+									<li><a href="/chn/" target="_blank" title="새창">Chinese</a></li>
+									<li><a href="/jpn/" target="_blank" title="새창">Japanese</a></li>
+									<li><a href="/spn/" target="_blank" title="새창">Spanish</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="section" id="search">
+						<h2 class="hidden">search</h2>
+						<form id="searchForm" method="post" action="javascript:go_search();">
+							<fieldset class="allsearch">
+								<legend>전체검색</legend>
+								<label for="key" class="hidden">전체검색키워드</label>
+								<input type="search" class="search" id="key" name="allsearch" placeholder="검색어를 입력하세요"  style="ime-mode:active;">
+								<input type="submit" value="검색" onclick="javascript:go_search();">
+							</fieldset>
+						</form>
+						<button id="searchOpen" class="searchHandler">통합검색열기</button>
+						<button id="searchClose" class="searchHandler">통합검색닫기</button>
+					</div>
+					<a href="#none" id="allmenuOpen" class="allmenuOpen">전체메뉴보기</a>
+					
+					<div id="gnb">
+							
+							
+								<h2 class="hidden">학부메뉴</h2>
+								
+
+<ul id="cufsMenu">
+	<li>
+		<a href="/uni/uni_hellomes.jsp">대학안내</a>
+		<div class="gnbSubWrap">
+			<div class="gnbSubList" id="gnbSubList01">
+				<div class="gnbSubmenuWrap">
+					<a href="/uni/uni_hellomes.jsp">총장인사말</a>
+					<!-- a href="/servlet/UniVerServlet?cmd=mess">부총장 인사말</a -->
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="/uni/uni_cuvision.jsp">CUFS비전</a>
+					<a href="/uni/uni_cufshist.jsp">연혁</a>
+					<a href="/uni/uni_educont0.jsp">교육목표·특징</a>
+					<a href="/uni/uni_cusymbol.jsp">CUFS상징</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/uni/uni_powerofcufs.jsp">홍보마당</a>
+						<ul>
+							<li><a href="/uni/uni_powerofcufs.jsp" class="spacing">사이버한국외대의 힘</a></li>
+							<li><a href="/servlet/NewsBrdServlet?cmd=list">보도자료</a></li>
+							<li><a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=COM_NTC_5">CUFS TODAY</a></li>
+							<li><a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=COM_NTC_18">외대가족소식</a></li>
+							<li><a href="/uni/uni_advertisement.jsp">대학광고</a></li>
+							<li><a href="/uni/uni_brochure.jsp">브로슈어</a></li>
+							<li><a href="/uni/uni_ebook.jsp">매거진-Cy외대</a></li>
+							<li><a href="/uni/uni_download.jsp">바탕화면 다운로드</a></li>							
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/servlet/UniVerServlet?cmd=newslist&amp;bbscode=COM_NTC_21">공지</a>
+						<ul>
+							<li><a href="/servlet/UniVerServlet?cmd=newslist&amp;bbscode=COM_NTC_21">일반공지</a></li>
+							<li><a href="/servlet/UniVerServlet?cmd=newslist&amp;bbscode=COM_NTC_1">학사공지</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="/uni/uni_cufsorg1.jsp">현황</a>
+					<a href="/uni/uni_money1.jsp">발전기금</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="/uni/uni_departmt.jsp">연락처</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="/uni/uni_cufspart.jsp">협력기관</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="javascript:mapPopup()" title="새창">학교오시는 길</a>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li>
+	 <a href="/servlet/EntMngServlet?cmd=index&amp;menucheck=1" title="입학안내 ">입학안내</a>
+		<!--  입시기간중 배너
+		<a href="/servlet/EntMngServlet?cmd=index&amp;menucheck=1" title="입학안내 " class="hidden">입학안내</a>
+		<div id="admission"><a href="/servlet/EntMngServlet?cmd=index&amp;menucheck=1" title="입학안내 -2017-2학기합격자 등록  2017. 8. 21~8. 25">입학안내</a></div>
+		-->
+		<div class="gnbSubWrap">
+			<div class="gnbSubList" id="gnbSubList02">
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<span>입학안내</span>
+						<ul>
+							<li><a href="/ent/info/info_intro.jsp">The Best! 사이버외대</a></li>
+							<li><a href="/ent/info/info_schedule.jsp">입학 주요사항</a></li>
+			    			<li><a href="/ent/info/info_entbiz.jsp">협약안내</a></li>
+							<li><a href="/ent/info/info_hakbu.jsp">학부소개</a></li>							
+							<li><a href="/ent/info/info_fund.jsp">장학안내</a></li>
+							<li><a href="javascript:mapPopup()" title="새창">오시는길</a></li>
+							<!-- 
+							<li><a href="/start_end/main.html" onclick="javascript:popWin(this.href, 'openpop', '990', '630', '1'); return false;" class="readypage">입학에서 졸업까지</a></li>
+							<li><a href="/ent/info/info_fund.jsp">장학안내</a></li>
+							 -->
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<span>신입학</span>
+						<ul>
+							<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=01">모집요강</a></li>	
+							<li><a href="/ent/ent/ent_step0.jsp?regEntType=new">지원서 작성</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<span>편입학</span>
+						<ul>
+							<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=01">모집요강</a></li>	
+							<li><a href="/ent/ent/ent_step0.jsp?regEntType=ams">지원서 작성</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<span>시간제</span>
+						<ul>
+							<li><a href="/servlet/EntTimServlet?strCmd=timnoti">모집요강</a></li>	
+							<li><a href="/ent/ent/ent_step0.jsp?regEntType=tim">지원서 작성</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<span>입학도우미</span>
+						<ul>
+							<li><a href="/servlet/EntPdsServlet?cmd=notlist&amp;bbscode=1">입학공지</a></li>
+							<li><a href="/ent/cst/entcst_faquentr.jsp" class="spacing">자주묻는질문</a></li>
+							<li><a href="/servlet/EntCstServlet?cmd=list&amp;bbscode=2">입학Q&amp;A</a></li>
+							
+							<li><a href="/servlet/EntPdsServlet?cmd=list&bbscode=4">입학자료실</a></li>
+							<li><a href="/ent/pds/entpds_brchrqst.jsp">입학자료</a></li>
+							<li><a href="/ent/pds/entpds_admission.jsp">방문 입학설명회</a></li>							
+							<li><a href="/ent/cst/entcst_teleinfo.jsp">상담전화안내</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<span>나의지원관리</span>
+						<ul>
+							
+							
+							<li><a href="/ent/ent/ent_step0.jsp">지원서작성</a></li>
+							
+							
+							<li><a href="/servlet/EntMngServlet?cmd=scrn">전형료 납부</a></li>
+							<li><a href="/servlet/EntMngServlet?cmd=selfintroduce">자기소개서</a></li>
+							<li><a href="/servlet/EntMngServlet?cmd=essay_info">학업소양검사</a></li>
+							<li><a href="/servlet/EntMngServlet?cmd=doccheck">구비서류제출</a></li>
+							<li><a href="/servlet/EntMngServlet?cmd=finalCheck">지원현황</a></li>
+							
+							<li><a href="/servlet/EntMngServlet?cmd=passcheck">합격확인</a></li>
+							<li><a href="/servlet/HakjukServlet?cmd=giveupinfo">입학포기신청</a></li>
+						</ul>
+						<!-- 
+							<li class="off"><a href="/servlet/EntMngServlet?cmd=applist">입학전형확인"></a></li>
+							<li class="off"><a href="/servlet/EntMngServlet?cmd=applyupdt1">지원서수정"></a></li>
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<a href="/bch/sch/bchsch_schemain.jsp" id="gnb03" class="admissionNext">학사안내</a>
+		<div class="gnbSubWrap">
+			<div class="gnbSubList" id="gnbSubList03">
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">
+					<a href="/bch/sch/bchsch_schemain.jsp">학사일정</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/bch/brl/bchbrl_majorule.jsp">학사제도</a>
+						<ul>
+							<li><a href="/bch/brl/bchbrl_majorule.jsp">전공제도</a></li>
+							<li><a href="/bch/brl/bchbrl_finish.jsp">학점이수표</a></li>
+							<li><a href="/bch/brl/bchbrl_schlmang.jsp">학사운영</a></li>
+							<li><a href="/bch/brl/bchbrl_plan.jsp">학습방법</a></li>
+							<li><a href="/bch/brl/bchbrl_lectaply.jsp">수강신청/수강철회</a></li>
+							<li><a href="/bch/brl/bchbrl_chanentr.jsp">편입학 학점인정</a></li>
+							<li><a href="/bch/brl/bchbrl_test.jsp">시험</a></li>
+							<li><a href="/bch/brl/bchbrl_scorvalu.jsp">성적평가</a></li>
+							<li><a href="/bch/brl/bchbrl_season.jsp">계절학기</a></li>
+							<li><a href="/bch/brl/bchbrl_creditexchange.jsp">학점교류</a></li>
+							<li><a href="/bch/brl/bchbrl_gradrule.jsp">졸업제도</a></li>
+							<li><a href="/servlet/LecPlanServlet?flag=1">강의계획서</a></li>
+							<li><a href="/bch/brl/bchbrl_cert.jsp">민간자격소개</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/bch/chg/bchchg_absnschl.jsp">학적변동</a>
+						<ul>
+							<li><a href="/bch/chg/bchchg_absnschl.jsp">휴학</a></li>
+							<li><a href="/bch/chg/bchchg_comeback.jsp">복학</a></li>
+							<li><a href="/bch/chg/bchchg_leavschl.jsp">자퇴/제적</a></li>
+							<li><a href="/bch/chg/bchchg_reentran.jsp">재입학</a></li>
+							<li><a href="/bch/chg/bchchg_chandept.jsp">전과(부)</a></li>
+							<li><a href="/bch/chg/bchchg_revision.jsp" class="spacing">학적부 기재사항 정정</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="/bch/rul/bchrul_regula00.jsp">학칙</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/bch/srl/bchsrl_fundtype.jsp">장학제도</a>
+						<ul>
+							<li><a href="/bch/srl/bchsrl_fundtype.jsp">장학종류</a></li>
+							<li><a href="/bch/srl/bchsrl_fundrule.jsp">장학지급규정</a></li>
+							<li><a href="/bch/srl/bchsrl_fundloan.jsp">학자금대출</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="/bch/grs/bchgrs_01.jsp">대학원진학안내</a>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<a href="/dep/dep_index.jsp" id="gnb04">학부소개</a>
+		<div class="gnbSubWrap">
+			<div class="gnbSubList tab9ea" id="gnbSubList04">
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/eng/depeng_subject1.jsp">영어학부</a>
+						<ul>
+							<li><a href="/dep/eng/depeng_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/eng/depeng_subject1.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=A01">교수진</a></li>
+							<li><a href="/dep/eng/depeng_adv.jsp">학부특장점</a></li>
+							<li><a href="/dep/eng/depeng_act.jsp">학부활동</a></li>
+							<li><a href="/dep/eng/depeng_cert.jsp">자격증/수료증</a></li>
+							<li><a href="/dep/eng/depeng_faq.jsp">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/chn/depchn_subjects.jsp">중국어학부</a>
+						<ul>
+							<li><a href="/dep/chn/depchn_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/chn/depchn_subjects.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=A10">교수진</a></li>
+							<li><a href="/dep/chn/depchn_adv.jsp">학부특장점</a></li>
+							<li><a href="/dep/chn/depchn_act.jsp">학부활동</a></li>
+							<li><a href="/dep/chn/depchn_cert.jsp">자격증/수료증</a></li>
+							<li><a href="/dep/chn/depchn_faq.jsp">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/jpn/depjpn_subjects.jsp">일본어학부</a>
+						<ul>
+							<li><a href="/dep/jpn/depjpn_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/jpn/depjpn_subjects.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=A11">교수진</a></li>
+							<li><a href="/dep/jpn/depjpn_adv.jsp">학부특장점</a></li>
+							<li><a href="/dep/jpn/depjpn_act.jsp">학부활동</a></li>
+							<li><a href="/dep/jpn/depjpn_cert.jsp">자격증/수료증</a></li>
+							<li><a href="/dep/jpn/depjpn_faq.jsp">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/kor/depkor_subjects.jsp">한국어학부</a>
+						<ul>
+							<li><a href="/dep/kor/depkor_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/kor/depkor_subjects.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=A22">교수진</a></li>
+							<li><a href="/dep/kor/depkor_adv.jsp">학부특장점</a></li>
+							<li><a href="/dep/kor/depkor_act.jsp">학부활동</a></li>
+							<li><a href="/dep/kor/depkor_cert.jsp">자격증/수료증</a></li>
+							<li><a href="/dep/kor/depkor_faq.jsp">FAQ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/spn/depspn_subjects.jsp">스페인어학부</a>
+						<ul>
+							<li><a href="/dep/spn/depspn_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/spn/depspn_subjects.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=A23">교수진</a></li>
+							<li><a href="/dep/spn/depspn_adv.jsp">학부특장점</a></li>
+							<li><a href="/dep/spn/depspn_cert.jsp">자격증/수료증</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/ase/depase_subject.jsp" class="spacing">베트남·인도네시아학부</a>
+						<ul>
+							<li><a href="/dep/ase/depase_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/ase/depase_subject.jsp ">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=A31">교수진</a></li>
+							<li><a href="/dep/ase/depase_adv.jsp">학부특장점</a></li>
+							<li><a href="/dep/ase/depase_cert.jsp">자격증/수료증</a></li>
+						</ul>				
+					</div>				
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/fin/depfin_subjects.jsp">금융회계학부</a>
+						<ul>
+							<li><a href="/dep/fin/depfin_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/fin/depfin_subjects.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=C23">교수진</a></li>
+							<li><a href="/dep/fin/depfin_adv.jsp">학부특장점</a></li>
+							<li><a href="/dep/fin/depfin_act.jsp">학부활동</a></li>
+							<li><a href="/dep/fin/depfin_cert.jsp">자격증/수료증</a></li>
+						</ul>							
+					</div>				
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">				
+						<a href="/dep/man/depman_subject.jsp" class="spacing">지방 행정·의회 학부</a>
+						<ul>
+							<li><a href="/dep/man/depman_overview.jsp">학부개요</a></li>
+							<li><a href="/dep/man/depman_subject.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=C20">교수진</a></li>
+							<li><a href="/dep/man/depman_adv.jsp">학부특장점</a></li>
+						</ul>					
+					</div>				
+				</div>
+				
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/dep/cul/depcul_subject1.jsp">교양학부</a>
+						<ul>
+							<li><a href="/dep/cul/depcul_overview.jsp">과정개요</a></li>
+							<li><a href="/dep/cul/depcul_subject1.jsp">교육과정</a></li>
+							<li><a href="/servlet/PrfDetServlet?dept=U01">교수진</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<a href="http://grad.cufs.ac.kr/" id="gotoGrad" target="_blank" title="새창">대학원</a>
+		<div class="gnbSubWrap hidden">
+			<div class="gnbSubList" id="gnbSubList05">
+			</div>
+		</div>
+	</li>
+	<li>
+		<a href="/clf/clf_index.jsp" id="gnb06">대학생활</a>
+		<div class="gnbSubWrap">
+			<div class="gnbSubList" id="gnbSubList06">
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/clf/lic/clflic_onlngude.jsp" class="spacingx2">사이버한국외대 체험관</a>
+						<ul>
+							<li><a href="/clf/lic/clflic_onlngude.jsp">온라인강의안내</a></li>
+							<!-- li><a href="/clf/lic/clflic_clssroom1.jsp">강의맛보기</a></li-->
+							<li><a href="/clf/lic/clflic_clssroom2.jsp">우수강의맛보기</a></li>
+							<li><a href="/clf/lic/clflic_words.jsp">외국어 단어 mp3</a></li> 						
+						</ul>
+					</div>
+				</div>
+				<!-- div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/clf/ocw/clfocw_psychology.jsp">무료공개강좌</a>
+						<ul>
+							<li><a href="/clf/ocw/clfocw_magic.jsp">생활마술 배우기</a></li>
+							<li><a href="/clf/ocw/clfocw_psychology.jsp">재미있는 심리 이야기</a></li>
+							<li><a href="/clf/ocw/clfocw_wine.jsp">와인과의 첫 스킨쉽</a></li>
+							<li><a href="/clf/ocw/clfocw_barista.jsp">바리스타 따라하면서 배우기</a></li>
+							<li><a href="/clf/ocw/clfocw_tasteng.jsp">A taste of English </a></li>
+							<li><a href="/clf/ocw/clfocw_3d_life.jsp">3D프린팅 생활용품</a></li>
+							<li><a href="/clf/ocw/clfocw_3d_industry.jsp">3D프린팅 산업용품</a></li>
+							<li><a href="/clf/ocw/clfocw_3d_found.jsp" style="letter-spacing:-0.1em;">3D프린팅 창업과 마케팅</a></li>							
+						</ul>
+					</div>
+				</div -->
+				<div class="gnbSubmenuWrap">
+					<a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=SLEC_QNA_1">오프/화상 특강</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/clf/cul/clfcul_main.jsp">CUFS교양in</a>
+						<ul>
+							<li><a href="/servlet/SpeLecServlet">교양특강</a></li>
+							<li><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=COM_NTC_8">웰빙CUFS</a></li>
+							<li><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=EDUF_NTC_1">새벽편지</a></li>
+							<!--li><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=EDUR_PIC_1">릴레이특강</a></li-->
+							<!--li><a href="/servlet/EduinBrdServlet?cmd=list&bbscode=EDUK_NTC_1">우리말나들이</a></li-->
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<a href="http://www.cufsminerva.com/" target="_blank" title="새창" style="letter-spacing:-0.1em;">CUFS 웹진 미네르바</a>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/clf/ass/clfass_certgude.jsp">학생지원센터</a>
+						<ul>
+							<li><a href="/clf/ass/clfass_certgude.jsp">학생증 발급</a></li>
+							<li><a href="/clf/ass/clfass_subcert1.jsp">증명서 발급</a></li>
+							<li><a href="/servlet/SisulReqServlet?cmd=main">오프라인 시설지원</a></li>
+							<li><a href="/clf/ass/clfass_studasst.jsp">인터넷서점</a></li>
+							<li><a href="/clf/ass/clfass_military1.jsp">병무생활</a></li>
+							<li><a href="/clf/ass/clfass_clinic.jsp">성평등 상담실</a></li>
+							<li><a href="/clf/ass/clfass_langeduc.jsp">어학교육원</a></li>
+							<li><a href="/clf/ass/clfass_career1.jsp">경력개발센터</a></li>
+							<li><a href="/clf/ass/clfass_elibrary.jsp">도서관</a></li>
+							<li><a href="/clf/gui/clfgui_hsp.jsp">학생복지</a></li>
+							<li><a href="/clf/ass/clfass_support1_1.jsp">장애학생지원</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/clf/gui/clfgui_main.jsp">CUFS길라잡이</a>
+						<ul>
+							<li><a href="/clf/gui/clfgui_ot_01.jsp ">학교생활OT</a></li>
+							<li><a href="/clf/gui/clfgui_compu_01.jsp">CUFS 컴퓨터특강</a></li>
+							<!--li><a href="/clf/gui/clfgui_toeiccbt.jsp">TOEIC&CBT</a></li-->					
+						</ul>
+					</div>
+				</div>
+				<div class="gnbSubmenuWrap">
+					<div class="innerUl">
+						<a href="/clf/hlp/clfhlp_helpmain.jsp">HELP DESK</a>
+						<ul>
+							<li><a href="/clf/hlp/clfhlp_downlist.jsp">수강시준비사항</a></li>
+							<li><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_QNA_2">학습/학사도우미</a></li>
+							<li><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_QNA_1">시스템도우미</a></li>
+							<li><a href="/servlet/HlpDskServlet?cmd=add&amp;bbscode=COM_QNA_6">불편불만접수센터</a></li>
+							<!--li><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_NTC_11">정보보호관리</a></li-->
+							<li><a href="/clf/hlp/clfhlp_faqufrst.jsp">FAQ</a></li>
+							<li><a href="/clf/hlp/clfhlp_helpcont.jsp">원격접속요청</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li>
+		<a href="/servlet/MyCufsServlet?" id="gnb07" class="gnbA cufsMenu">강의실</a>
+		<div class="gnbSubWrap">
+			<div class="gnbSubList" id="gnbSubList07">
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap">&nbsp;</div>
+				<div class="gnbSubmenuWrap"><a href="/servlet/StdSbsServlet?cmd=coo_lec_room" class="depth02">수강과목</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cuf/service/service.jsp" class="depth02">학사관리</a></div>
+			</div>
+		</div>
+	</li>
+	<li class="end">
+		<a href="/cmt/cmt_index.jsp" id="gnb08" class="gnbA cufsMenu">CUFS광장</a>
+		<div class="gnbSubWrap">
+			<div class="gnbSubList tab9ea" id="gnbSubList08">
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A01">영어학부</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A10">중국어학부</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A11">일본어학부</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A22">한국어학부</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A23">스페인어학부</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A31" class="spacing">베트남·인도네시아학부</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=C23">금융회계학부</a></div>
+				<div class="gnbSubmenuWrap"><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=C20" class="spacing">지방 행정·의회 학부</a></div>
+				<div class="gnbSubmenuWrap">
+					<a href="/servlet/AssMainServlet">총학생회</a>
+					<a href="/servlet/ClubMainServlet">동아리</a>
+				</div>
+				
+			</div>
+		</div>
+	</li>
+</ul>
+
+							
+					</div>
+				</div>
+		</div>
+		<div id="shadow" class="shadow"></div>
+		<div id="submenuwraper">
+			<div class="submenuArea">
+				<div class="outerWrap">
+					<div class="innerWrap"></div>
+				</div>
+			</div>
+			<div class="shadow"></div>
+		</div>
+	</div>
+	<div id="wrapArticle">
+		<div id="container">
+		
+
+
+
+
+<script src="/js/jquery.printElement.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+		$("#pprint").click(function() {
+			printByJquery({
+				printMode: 'popup', //팝업설정 popup = 팝업창 , iframe = iframe
+				overrideElementCSS: ['/css/k2_print.css', { href: '/css/k2_print.css', media: 'print'}], //css경로
+				styleToAdd:'width:100%; height:100%;',
+				pageTitle:'사이버 외국어 대학교 - 프린트 미리보기', //팝업 타이틀
+				leaveOpen: false //false = 인쇄후 창닫기
+			});
+		});
+	
+	});
+	
+	function printByJquery(options) {
+		$("#article").printElement(options);
+	}
+</script>
+
+<!-- header end /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+				
+				<div id="subVisual">
+					<p>The Best Cy외대</p>
+				</div>
+				
+				<div id="pageNavigation">
+					<div class="subWrap">
+						<ul id="navigation">
+							<li><a href='/index_bottom.jsp'>홈</a></li><li><a href='/clf/clf_index.jsp'>대학생활</a></li><li><a href='/clf/cul/clfcul_main.jsp'>CUFS 교양in</a></li><li class='on'><strong>새벽편지</strong></li>
+						</ul>
+						<ul id="handler">
+							
+							<li class="etc">
+								
+								<a href="#print" id="pprint" title="새창으로 프린트하기" class="print">프린트</a>
+							</li>
+							<li class="zoom">
+								<a href="#fontminus" onclick="zoomUtil('minus',event); return false;" class="zoomOut">화면축소</a>
+								<a href="#none" class="bold" id="reload">원래대로</a>
+								<a href="#fontplus" onclick="zoomUtil('plus',event); return false;" class="zoomIn">화면확대</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="contents" class="subWrap">
+					<div>
+					<div id="article">
+
+						<h2 id="headTitle">
+							호랑이와 토끼
+						</h2>
+
+						
+
+
+
+						
+
+
+					
+						
+						
+						
+						
+
+
+
+	
+	
+	
+
+	
+	
+	
+
+	
+
+	
+
+	
+	
+
+	
+	
+	
+		
+	
+
+
+	
+
+						
+
+<!-- pageHeader end /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->				
+
+
+	
+	
+	
+	
+	<!--S : 로그인 후 레이어팝업-->
+	
+	<!-- E : 로그인 후 레이어팝업-->	
+			
+
+	
+	
+
+
+	
+
+
+<script language=javascript>
+<!--
+function go_login(){
+	 if ( confirm("로그인 하셔야 글을 작성할 수 있습니다. 로그인을 하시겠습니까?") ) {
+		document.location.href="/com/com_commlgin.jsp?retUrl=/servlet/EduinBrdServlet?cmd=view%26bbscode=EDUF_NTC_1%26bbsnumb=19";
+		//document.mmoform.submit();
+	}
+}
+
+-->
+</script>
+
+	<div class="dataView">
+		<h3 class="hidden">호랑이와 토끼</h3>
+		<div class="dataInfoWrap">
+			<dl class="onlyHit">
+				<dt>제목</dt>
+				<dd>호랑이와 토끼</dd>
+			</dl>
+			<dl class="hit">
+				<dt>조회수</dt>
+				<dd>0</dd>
+			</dl>
+		</div>
+		<div class="dataFileWrap">
+			<dl>
+				<dt>국적별</dt>
+				<dd>
+					<a href="/servlet/EduinBrdServlet?cmd=view&bbscode=EDUF_NTC_1&bbsnumb=19"><img src="/new_images/btn/btn_eng.gif" width="51" height="20" alt="영어" /></a> 
+					
+					<a href="/servlet/EduinBrdServlet?cmd=view&bbscode=EDUF_NTC_1&bbsindex=19&bbsurl=C"><img src="/new_images/btn/btn_chi.gif" width="63" height="20" alt="중국어" /></a> 
+					
+					
+					<a href="/servlet/EduinBrdServlet?cmd=view&bbscode=EDUF_NTC_1&bbsindex=19&bbsurl=J"><img src="/new_images/btn/btn_ja.gif" width="63" height="20" alt="일본어" /></a>
+					
+				</dd>
+			</dl>
+		</div>
+		<div id="viewArea" class="alignC">
+			<iframe width=545 height=1960 src="http://www.m-letter.or.kr/mail/language/china/china_7.asp" frameborder=0 marginheight=0 marginwidth=0 scrolling=auto></iframe>
+		</div>
+	</div>
+	
+	<div class="dataButton">
+		<div class="right">
+			<span class="button large blue"><a href="/servlet/EduinBrdServlet?cmd=list&bbscode=EDUF_NTC_1&page=&position=">목록</a></span>
+		</div>
+	</div>
+
+	<!-- 2010-10-14 : 댓글 추가 -->
+	<div class="commentWrite bor0">
+		<div class="form clear bor0">
+						
+				<form name="mmoform" id="comment_form" method="post" action="/com/com_commlgin.jsp" >
+					<input type=hidden name="retUrl" value="/servlet/EduinBrdServletcmd=view&amp;bbscode=EDUF_NTC_1&amp;bbsnumb=19">
+				<fieldset>
+				<legend>댓글쓰기</legend>
+					<label for="comment" class="hidden">댓글입력</label>
+					<div class="insert comment">
+						<textarea name="mmodesc" id="comment">글을 작성 하시려면 로그인이 필요합니다.</textarea> 
+						<span class="button comment"><a href="javascript:go_login();">댓글쓰기</a></span>
+					</div>
+				</fieldset>
+				</form>
+			
+		</div>
+	</div>
+	<p class="refer">200Byte 약 100자의 의견과 댓글을 달아주세요. (<strong class="colorC">0</strong>byte / 200byte)</p>
+	<div class="commentList">
+		<ul>
+		
+		</ul>
+			
+	</div>
+	<!-- [s] 페이징 테이블 -->
+	<div class="dataPaging"><div class="pagingWrap">                 </div></div>
+
+	<!-- [e] 페이징 테이블 -->
+	<!-- [e] 코멘트(덧글) 작성 -->
+
+ 
+<div class="dataPrevNext useDate">
+	
+	<dl class="prev">
+		<dt>Prev</dt>
+		<dd>
+			<a href="/servlet/EduinBrdServlet?cmd=view&bbscode=EDUF_NTC_1&bbsnumb=4&page=&position=">부지런하면 밥은 먹는다</a>
+			<span class="date">
+				
+					2007-06-07
+				
+			</span>
+		</dd>
+	</dl>
+	
+	<dl class="next">
+		<dt>Next</dt>
+		<dd>
+			<a href="/servlet/EduinBrdServlet?cmd=view&bbscode=EDUF_NTC_1&bbsnumb=0&page=&position="></a>
+			<span class="date">
+				
+			</span>
+		</dd>
+	</dl>
+	
+</div>
+
+
+
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+<!-- pageFooter start /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+					</div><!-- #article -->
+					</div>
+					<div id="aside">
+						<h2 hidden>서브메뉴 영역</h2>
+						
+							
+							
+							
+							
+							
+						
+
+
+
+
+
+
+
+
+<script language="javascript" src="/js/util.js"></script>
+<script language="javascript">
+	function join()
+	{
+		var postData;
+		postData = "cmd=join";
+		callHttpReq("/servlet/ClubGrbServlet",postData,processReq);
+	}
+	function out()
+	{
+		var postData;
+		postData = "cmd=out";
+		callHttpReq("/servlet/ClubGrbServlet",postData,processReq);
+	}
+	
+	function showMenu(arg){
+		document.getElementById(arg).style.display = "block";
+	}
+	function hideMenu(arg){
+		document.getElementById(arg).style.display = "none";
+	}
+</script>
+
+
+
+
+<div id="asideSubmenuWrap">
+	<nav class="submenu">
+		<h2 hidden>대학안내</h2>
+		<ul class="lnb">
+			<li class="off"><a href="/clf/lic/clflic_onlngude.jsp">사이버한국외대 체험관</a>
+				<ul class="lnblnb">
+					<li class="off"><a href="/clf/lic/clflic_onlngude.jsp">온라인강의안내</a></li>
+					<!--li class="off"><a href="/clf/lic/clflic_clssroom1.jsp">강의맛보기</a></li-->
+					<li class="off"><a href="/clf/lic/clflic_clssroom2.jsp">우수강의맛보기</a></li>
+					<li class="off"><a href="/clf/lic/clflic_words.jsp">외국어 단어 mp3</a></li> 	
+				</ul>
+			</li>
+	
+			<!-- 오프/화상 특강 메뉴추가 -->
+			<li class="off"><a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=SLEC_QNA_1">오프/화상 특강</a></li>
+	
+			<li class="on"><a href="/clf/cul/clfcul_main.jsp">CUFS교양in</a>
+				<ul class="lnblnb" id="SListSub">				
+					<li class="off"><a href="/servlet/SpeLecServlet">교양특강</a></li>
+					<li class="off"><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=COM_NTC_8">웰빙CUFS</a></li>				
+					<li class="on"><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=EDUF_NTC_1">새벽편지</a></li>
+					<!-- li class="off"><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=EDUR_PIC_1">릴레이특강</a></li-->
+					<!-- li class="off"><a href="/servlet/EduinBrdServlet?cmd=list&bbscode=EDUK_NTC_1">우리말나들이</a></li-->				
+				</ul>
+			</li>
+	
+			<li class="off"><a href="http://www.cufsminerva.com/" target="_blank" title="새창">CUFS 웹진 미네르바</a></li>
+			<li class="off"><a href="/clf/ass/clfass_certgude.jsp">학생지원센터</a>
+				<ul class="lnblnb">
+					<li class="off"><a href="/clf/ass/clfass_certgude.jsp">학생증 발급</a></li>
+					<li class="off"><a href="/clf/ass/clfass_subcert1.jsp">증명서 발급</a></li>
+					<li class="off"><a href="/servlet/SisulReqServlet?cmd=main">오프라인 시설지원</a></li>
+					<li class="off"><a href="/clf/ass/clfass_studasst.jsp">인터넷서점</a></li>
+					<li class="off"><a href="/clf/ass/clfass_military1.jsp">병무생활</a></li>
+					<li class="off"><a href="/clf/ass/clfass_clinic.jsp">성평등 상담실</a></li>
+					<li class="off"><a href="/clf/ass/clfass_langeduc.jsp">어학교육원</a></li>
+					<li class="off"><a href="/clf/ass/clfass_career1.jsp">경력개발센터</a></li>
+					<li class="off"><a href="/clf/ass/clfass_elibrary.jsp">도서관</a></li>
+					<li class="off"><a href="/clf/gui/clfgui_hsp.jsp">학생복지</a></li>
+					<li class="off"><a href="/clf/ass/clfass_support1_1.jsp">장애학생지원</a></li>
+				</ul>
+			</li>
+			<li class="off"><a href="/clf/gui/clfgui_main.jsp">CUFS길라잡이</a>
+				<ul class="lnblnb">
+					<li class="off"><a href="/clf/gui/clfgui_ot_01.jsp">학교생활OT</a></li>
+					<li class="off"><a href="/clf/gui/clfgui_compu_01.jsp">CUFS컴퓨터특강</a></li>
+					<!--li class="off"><a href="/clf/gui/clfgui_toeiccbt.jsp">TOEIC&CBT</a></li-->
+					<!-- <li class="off"><a href="javascript:alert('준비중입니다');">학점인정 해외 어학연수</a></li> -->
+				</ul>
+			</li>
+			<li class="off"><a href="/clf/hlp/clfhlp_helpmain.jsp">Help Desk</a>
+				<ul class="lnblnb">
+					<li class="off"><a href="/clf/hlp/clfhlp_downlist.jsp">수강시 준비사항</a></li>
+					<li class="off"><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_QNA_2">학습/학사도우미</a></li>
+					<li class="off"><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_QNA_1">시스템도우미</a></li>
+					<li class="off"><a href="/servlet/HlpDskServlet?cmd=add&amp;bbscode=COM_QNA_6">불편불만접수센터</a></li>
+					<!--li class="off"><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_NTC_11">정보보호관리</a></li-->
+					<li class="off"><a href="/clf/hlp/clfhlp_faqufrst.jsp">FAQ</a></li>
+					<li class="off"><a href="/clf/hlp/clfhlp_helpcont.jsp">원격접속요청</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+
+
+	
+<!--
+/clf/mkt/clfmkt_cpsslist.jsp
+-->
+						
+						
+						<ul class="myCufsBanner">
+							<li><a href="/clf/ass/clfass_certgude.jsp"><img src="/k2_images/layout/subBanner/subBanner10.gif" alt="학생증발급"></a></li>
+							<li><a href="/clf/ass/clfass_subcert1.jsp"><img src="/k2_images/layout/subBanner/subBanner11.gif" alt="증명서발급"></a></li>
+							<li><a href="/clf/ass/clfass_studasst.jsp"><img src="/k2_images/layout/subBanner/subBanner12.gif" alt="인터넷서점"></a></li>
+						</ul>
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>				
+<!-- footer start /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		
+
+
+
+			</div>
+		</div><!-- // #wrapArticle -->
+		<div id="wrapFooter">
+			<div id="footer">
+				<div id="csWrap">
+					<div class="wrap">
+						<div class="quick">
+							<h2 class="hidden">퀵메뉴</h2>
+							<ul class="quickList">
+								<li>
+									<dl>
+										<dt>대학안내 </dt>
+										<dd>
+											<ul class="quickMenu">
+												<li><a href="/uni/uni_hellomes.jsp">총장인사말</a></li>
+												<!-- li><a href="/servlet/UniVerServlet?cmd=mess">부총장인사말</a></li -->
+												<li><a href="/uni/uni_educont0.jsp">교육목표,특징</a></li>
+												<li><a href="/uni/uni_powerofcufs.jsp">사이버한국외대의 힘</a></li>
+												<li><a href="/servlet/NewsBrdServlet?cmd=list">보도자료</a></li>
+												<li><a href="/uni/uni_money1.jsp">발전기금</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>학사안내</dt>
+										<dd>
+											<ul class="quickMenu">
+												<li><a href="/bch/brl/bchbrl_majorule.jsp">전공제도</a></li>
+												<li><a href="/bch/brl/bchbrl_finish.jsp">학점이수표</a></li>
+												<li><a href="/bch/brl/bchbrl_chanentr.jsp">편입학 학점인정</a></li>
+												<li><a href="/bch/brl/bchbrl_gradrule.jsp">졸업제도</a></li>
+												<li><a href="/bch/srl/bchsrl_fundtype.jsp">장학제도</a></li>
+												<li><a href="/bch/chg/bchchg_absnschl.jsp">학적변동</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>대학생활</dt>
+										<dd>
+											<ul class="quickMenu">
+												<li><a href="/clf/lic/clflic_clssroom2.jsp">우수강의 맛보기</a></li>
+												<li><a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=SLEC_QNA_1">오프/화상특강</a></li>
+												<li><a href="/clf/ass/clfass_certgude.jsp">학생증발급</a></li>
+												<li><a href="/clf/ass/clfass_subcert1.jsp">증명서발급</a></li>
+												<li><a href="/clf/ass/clfass_studasst.jsp">인터넷서점</a></li>
+												<li><a href="/servlet/SisulReqServlet?cmd=main">오프시설신청</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>부속서비스</dt>
+										<dd>
+											<ul class="quickMenu">
+												<li><a href="/clf/ass/clfass_elibrary.jsp">도서관</a></li>
+												<li><a href="/pop/popup_mcam_guide2.jsp" onclick="javascript:popWin(this.href, 'openpop', '725', '720', '1'); return false;">모바일캠퍼스</a></li>
+												<li><a href="http://www.cufsminerva.com/" target="_blank" title="새창">CUFS 웹진 미네르바</a></li>
+												<!-- li><a href="/clf/ass/clfass_career.jsp">경력개발센터</a></li-->
+												<li><a href="http://ctl.cufs.ac.kr/" target="_blank" title="새창">교수학습센터</a></li>
+												<li><a href="/clf/gui/clfgui_hsp.jsp">학생복지</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<div id="hotLink">
+							<h2 class="hotTab">
+								HOT LINK
+								<button class="hotOpen">열기</button>
+								<button class="hotClose">접기</button>
+							</h2>
+							<div class="quickMenuWrap">
+								<ul class="quickMenu">
+									<li><a href="/uni/uni_departmt.jsp">교내전화번호</a></li>
+									<li><a href="javascript:mapPopup()" title="새창">찾아오시는 길</a></li>
+									<li><a href="/bch/chg/bchchg_revision.jsp" class="spacing" style="letter-spacing:-1px;">학적부정정(개명,주민번호)</a></li>
+									<li><a href="/servlet/CrlOutServlet?cmd=befor" onclick="javascript:popWin(this.href, 'openpop', '685', '630', '1');return false;" title="새창">공인인증서 유예신청</a></li> 
+									<li><a href="http://www.cufs.ac.kr/servlet/UniVerServlet?cmd=newsview&bbscode=COM_NTC_1&bbsnumb=2966&page=&position=" target="_blank" title="새창"  style="letter-spacing: -0.12em">PC용 공인인증서 변경 설치 안내</a></li>
+									<li><a href="/servlet/UniVerServlet?cmd=newsview&bbscode=COM_NTC_21&bbsnumb=2188&page=&position=">교내무선인터넷(와이파이)</a></li>
+									<li><a href="https://sr.hufs.ac.kr/seatReservation.html" onclick="javascript:window.open(this.href,'Popup','width=815,height=600,left=10,top=10,scrollbars=yes');return false;" title="새창">교내사이버관 열람실예약</a></li>
+									<li><a href="/bch/brl/bchbrl_finish.jsp">학점이수표</a></li>
+									<li><a href="/bch/brl/bchbrl_gradrule.jsp">졸업제도</a></li>
+									<li><a href="https://video.cufs.ac.kr/" target="_blank" title="새창">화상강의시스템</a></li>
+									<li><a href="/servlet/SpeLecServlet">교양특강</a></li>
+									<li><a href="http://www.cufsminerva.com/"  target="_blank" title="새창" style="letter-spacing:-1px;">CUFS 웹진 미네르바</a></li>
+									<li><a href="/clf/ass/clfass_career1.jsp">경력개발센터</a></li>																								
+								</ul>
+							</div>
+						</div>
+						<div class="customer">
+							<h2 class="hidden">원격지원 및 상담서비스 안내</h2>
+							<dl class="support">
+								<dt>원격지원서비스</dt>
+								<dd class="tel"><span>1644</span><span class="dash">-</span><span>5223</span></dd>
+								<dd class="tel2">(해외:82-2-6907-6703)</dd>
+								<dd class="goto2"><a href="/clf/hlp/clfhlp_helpcont.jsp"><span>바로가기</span></a></dd>
+							</dl>
+							<dl class="advice">	
+								<dt>상담(입학)</dt>
+								<dd class="kko"><a href="http://goto.kakao.com/@cufs" target="_blank" title="새창">카카오톡 ID: @cufs</a></dd>
+								<dd class="tel"><span>02</span><span class="dash">-</span>2173<span class="dash">-</span><span>2580</span></dd>													
+								<dd class="goto">
+									<a href="/ent/cst/entcst_faquentr.jsp" class="faq"><span>FAQ</span></a>
+									<a href="/servlet/EntCstServlet?cmd=list&amp;bbscode=2" class="qna"><span>입학Q&amp;A</span></a>
+								</dd>
+							</dl>
+						</div>
+						<div class="sns">
+							<h2 class="hidden">SNS바로가기</h2>
+							<ul>
+								<li><a href="https://www.instagram.com/cufs_official/" target="_blank" title="새창" class="insta">사이버한국외국어대학교 인스타그램</a></li>
+								<li><a href="http://blog.naver.com/cufspr" target="_blank" title="새창" class="blog">사이버한국외국어대학교 블로그</a></li>
+								<li><a href="http://www.facebook.com/CUFS.Minerva" target="_blank" title="새창" class="facebook">사이버한국외국어대학교 페이스북</a></li>
+								<li><a href="http://post.naver.com/cufspr" target="_blank" title="새창" class="npost">사이버한국외국어대학교 포스트</a></li>
+								<li><a href="http://www.cufsminerva.com/" target="_blank" title="새창" class="etc">사이버한국외국어대학교 미네르바</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="infoWrap">
+					<div class="wrap">
+						<div class="infoMenu">
+							<h2 class="hidden">정보메뉴</h2>
+							<ul class="infoList">
+								<li><a href="http://www.academyinfo.go.kr/UIPISA/uipnh/unt/ipsrch/UntUnvAcdtSrchPupInr.do?schlId=0000332" target="_blank" title="새창">대학정보공시</a></li>
+								<li><a href="#none" onclick="javascript:mapPopup1(); return false;">교내캠퍼스안내</a></li>
+								<li><a href="http://www.smartbill.co.kr/" target="_blank" title="새창">전자세금계산서</a></li>
+								<li><a href="/etc/file_down.jsp?dirname=www_dir&sub_dir=/file&filename=agreement.pdf" target="_blank" title="새창">일반회원이용약관</a></li>
+								<li><a href="/man/man_prtcprvt.jsp" onclick="javascript:winPopup(this.href, 'prtcprvt', 'scrollbars=yes,width=780,height=650'); return false;"><span  class="copyright">개인정보처리방침</span></a></li>
+								<li><a href="/man/man_cufsmgnt.jsp" onclick="javascript:winPopup(this.href, 'cufsmgnt', 'scrollbars=yes,width=510,height=300'); return false;">이메일주소무단수집거부</a></li>
+							</ul>
+						</div>
+						<div class="gotoMenu">
+							<h2 class="hidden">바로가기</h2>
+							<ul class="gotoList">
+								<li id="gotoListDept">
+									<a href="#gotoListDept" id="gotoListDept2" class="anchor">부속기관바로가기</a>
+									<div class="gotoListDiv">
+										<ul>
+											<li><a href="http://www.cufsminerva.com/" target="_blank" title="새창">미네르바웹진</a></li>										
+											<li style="letter-spacing:-1px;"><a href="http://edu.cufs.ac.kr/" target="_blank" title="새창">사이버외대 평생전문가교육원</a></li>
+											<li><a href="http://weblib.hufs.ac.kr" target="_blank" title="새창">전자도서관</a></li>
+											<!-- <li><a href="http://career.cufs.ac.kr" target="_blank" title="새창">경력개발센터</a></li>-->
+											
+											<li><a href="http://professor.cufs.ac.kr" target="_blank" title="새창">강의운영사이트(LMS)</a></li>
+											<!--<li><a href="http://cdms.cufs.ac.kr" target="_blank" title="새창">콘텐츠개발운영사이트(CDMS)</a></li> -->
+											<li><a href="http://ctl.cufs.ac.kr/" target="_blank" title="새창">교수학습센터 (CTL)</a></li>
+											<li><a href="http://www.hufs.ac.kr" target="_blank" title="새창">한국외국어대학교 </a></li>
+											<li><a href="http://www.hafs.hs.kr/" target="_blank" title="새창">용인외국어고등학교</a></li>
+											<li class="focusLast"><a href="http://flttc.hufs.ac.kr/" target="_blank" title="새창">외국어연수평가원</a></li>
+										</ul>
+									</div>
+								</li>
+								<li id="gotoListClass">
+									<a href="#gotoListClass" id="gotoListClass2" class="anchor">학부바로가기</a>
+									<div class="gotoListDiv">
+										<ul>
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A01">영어학부</a></li>
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A10">중국어학부</a></li>
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A11">일본어학부</a></li>
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A22">한국어학부</a></li>
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A23">스페인어학부</a></li>
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A31"><span style="letter-spacing:-1px">베트남·인도네시아학부</span></a></li>											
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=C23">금융회계학부</a></li>
+											<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=C20">지방 행정·의회 학부</a></li>
+											<li><a href="/servlet/AssMainServlet">총학생회</a></li>
+											<li class="focusLast"><a href="/servlet/ClubMainServlet">동아리</a></li>
+											
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="copyWrap">
+					<div class="wrap">
+						<h2>한국외국어대학교</h2>
+						<div class="copyright">
+							<p> 서울특별시 동대문구 이문로 107 사이버한국외국어대학교 (130-791) Tel:02-2173-2580 | Fax:02-966-6183 </p>
+							<p>대표:김중렬 | 고유번호:204-82-06960 | 통신판매업신고번호 : 제2014-서울동대문-0532호</p>
+							<p><span style="font-size:0.8em;">Copyright (c) 2014 CYBER HANKUK UNIVERSITY OF FOREIGN STUDIES. All Rights Reserved.</span> <a href="#map" onclick="javascript:mapPopup();">찾아오시는 길</a> <a href="/uni/uni_departmt.jsp">연락처안내</a></p>
+						</div>
+						<div class="markDiv">
+							<ul>
+								<li><a href="/pop/popup_gec_2010.jsp" onclick="javascript:winPopup(this.href, 'certficate', 'scrollbars=yes,width=840,height=600'); return false;" class="mark01" title="한국교육컨텐츠품질인증 새창">한국교육컨텐츠품질인증</a></li>
+								<li><a href="/pop/popup_certficate.jsp" onclick="javascript:winPopup(this.href, 'certficate', 'scrollbars=yes,width=845,height=625'); return false;" class="mark02" title="정보보호관리체계인증 새창">정보보호관리체계인증</a></li>
+								<li><a href="#none" onclick="javascript:cert_status('c0bc927e37fc036aa63341e0222d2076','www.cufs.ac.kr'); return false;" class="mark03" title="웹서버인증 새창">웹서버인증</a></li>
+								<li><a href="/pop/popup_keris_2010.jsp" onclick="javascript:winPopup (this.href, 'certficate', 'scrollbars=yes,width=572,height=625'); return false;" class="mark04" title="KERIS품질인증 새창">KERIS품질인증</a></li>
+								<!-- 
+								<a href="http://icde.org/ " target="_blank"><img src="/new_images/btn/footer_mak_08.png" alt="ICDE(국제원격교육협회)"class="png24" /></a>	
+								<a href="#none"><img src="/new_images/btn/footer_mak_05.png" onClick="javascript:winPopup ('/pop/popup_110930.jsp', 'certficate', 'scrollbars=yes,width=620,height=650'); return false;" alt="개인정보보호법 전면시행안내"class="png24" /></a>	
+								<a href="http://www.kosaf.go.kr" target="_blank"><img src="/new_images/btn/footer_mak_06.png" alt="한국장학재단"class="png24" /></a>	
+								 -->
+							</ul>
+						</div>
+						<!-- div class="web_accessibilty"><a href="/file/web_accessibilty.pdf" title="웹접근성 품질인증서 새창" target="_blank" ><img src="/k2_images/layout/footer/web_accessibilty.gif" alt="웹접근성 품질인증서"></a></div -->
+						<div class="markAward"><a href="/webaward2014.jsp" title="WEB AWARD 11th FINALIST 새창" onclick="javascript:window.open(this.href,'webaward2014','width=680,height=800,scrollbars=yes'); return false;"><img src="/k2_images/layout/footer/webaward.gif" alt="WEB AWARD 11th FINALIST"></a></div>
+						<div class="qr" title="스캔하시면 모바일 홈페이지로 이동합니다. 사이트주소는 : http://m.cufs.ac.kr/ 입니다.">모바일 홈페이지 바로가기</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- //wrapFooter -->
+	</div>
+	<style>
+	.modalClose {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		width: 28px;
+		height: 26px;
+		border: 0;
+		text-indent: -5000px;
+		background: url(/k2_images/layout/modal/btnModalClose.gif) no-repeat left top;
+		}
+	</style>
+	<div id="allmenuModalBg">
+		<div id="allmenuModalBox">
+			<div class="modalHeader">
+				<h3 class="modalTitle">전체메뉴</h3>
+				<p class="modalSlogan">JOIN CUFS GO GLOBAL</p>
+			</div>
+				
+			<div class="modalArticle">
+				
+				<div class="modalSection">
+					
+
+	<nav>
+		<h2 class="hidden">전체메뉴</h2>
+		<ul class="menuList">
+			<li>
+				<dl>
+					<dt><a href="/uni/uni_hellomes.jsp">대학안내</a></dt>
+					<dd>
+						<ul>
+							<li><a href="/uni/uni_hellomes.jsp">총장인사말</a></li>
+							<!-- li><a href="/servlet/UniVerServlet?cmd=mess">부총장인사말</a></li -->
+							<li><a href="/uni/uni_cuvision.jsp">CUFS비젼</a></li>
+							<li><a href="/uni/uni_cufshist.jsp">연혁</a></li>
+							<li><a href="/uni/uni_educont0.jsp">교육목표ㆍ특징</a></li>
+							<li><a href="/uni/uni_cusymbol.jsp">CUFS상징</a></li>
+							<li><a href="/uni/uni_powerofcufs.jsp">홍보마당</a>
+								<ul>
+									<li><a href="/uni/uni_powerofcufs.jsp">사이버한국외대의 힘</a></li>
+									<li><a href="/servlet/NewsBrdServlet?cmd=list">보도자료</a></li>
+									<li><a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=COM_NTC_5">CUFS TODAY</a></li>
+									<li><a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=COM_NTC_18">외대가족소식</a></li>
+									<li><a href="/uni/uni_advertisement.jsp">대학광고</a></li>
+									<li><a href="/uni/uni_brochure.jsp">브로슈어</a></li>
+									<li><a href="/uni/uni_ebook.jsp">매거진-Cy외대</a></li>
+									<li><a href="/uni/uni_download.jsp">바탕화면 다운로드</a></li>
+								</ul>
+							</li>
+							<li><a href="/servlet/UniVerServlet?cmd=newslist&amp;bbscode=COM_NTC_21">공지</a>
+								<ul>
+									<li><a href="/servlet/UniVerServlet?cmd=newslist&amp;bbscode=COM_NTC_21">일반공지</a></li>
+									<li><a href="/servlet/UniVerServlet?cmd=newslist&amp;bbscode=COM_NTC_1">학사공지</a></li>
+								</ul>
+							</li>
+							<li><a href="/uni/uni_cufsorg1.jsp">현황</a></li>
+							<li><a href="/uni/uni_money1.jsp">발전기금</a></li>
+							<li><a href="/uni/uni_departmt.jsp">연락처</a></li>
+							<li><a href="/uni/uni_cufspart.jsp">협력기관</a></li>
+							<li><a href="javascript:mapPopup()" title="새창">학교오시는 길</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/servlet/EntMngServlet?cmd=index&amp;menucheck=1">입학안내</a></dt>
+					<dd>
+						<ul>
+							<li><a href="/ent/info/info_intro.jsp" target="_blank" title="새창">The Best! 사이버외대</a>
+								<ul>
+									<li><a href="/ent/info/info_intro.jsp" target="_blank" title="새창">사이버한국외대의 힘</a></li>
+									<li><a href="/servlet/NewsBrdServlet" target="_blank" title="새창">CUFS TODAY</a></li>
+									<li><a href="/uni/uni_ebook.jsp" target="_blank" title="새창">매거진-Cy외대</a></li>
+									<li><a href="https://youtu.be/L7HjHfAZOB8" target="_blank" title="새창">CUFS 홍보영상</a></li>
+									<li><a href="/clf/lic/clflic_clssroom2.jsp" target="_blank" title="새창">우수강의 맛보기</a></li>
+								</ul>														
+							</li>	
+							<li><a href="/ent/info/info_schedule.jsp">입학 주요사항</a>
+								<ul>
+									<li><a href="/ent/info/info_schedule.jsp">입학일정</a></li>
+									<li><a href="/ent/info/info_step.jsp">입학절차안내</a></li>
+									<li><a href="/ent/info/info_myparagon.jsp">나의전형찾기</a></li>
+									<li><a href="/ent/info/info_senddoc.jsp">제출서류안내</a></li>
+									<li><a href="/start_end/main.html" onclick="javascript:popWin(this.href, 'openpop', '990', '630', '1'); return false;">입학에서 졸업까지</a></li>
+								</ul>
+							</li>
+							<li><a href="/ent/info/info_entbiz.jsp">협약안내</a>
+								<ul>
+									<li><a href="/ent/info/info_entbiz.jsp">산업체 위탁 </a></li>
+									<li><a href="/ent/info/info_educollabo.jsp">교육협력</a></li>
+									<li><a href="/ent/info/info_entbiz_01.jsp">군 위탁 </a></li>
+								</ul>
+							</li>
+							<li><a href="/ent/info/info_hakbu.jsp">학부소개</a></li>						
+							<li><a href="/ent/info/info_fund.jsp">장학안내</a></li>
+							<li><a href="javascript:mapPopup()" title="새창">오시는길</a></li>
+							<!-- 
+							<li><a href="/start_end/main.html" onclick="javascript:popWin(this.href, 'openpop', '990', '630', '1'); return false;">입학에서 졸업까지</a></li>
+							<li><a href="/ent/info/info_fund.jsp">장학안내</a></li>
+							 -->							
+																								
+							<li><a href="/servlet/EntNewServlet?strCmd=newnoti">신입학</a>
+								<ul>
+									<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=01">모집요강</a>
+										<ul>
+											<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=01">일반전형</a></li>
+											<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=02">산업체위탁</a></li>
+											<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=03">군위탁</a></li>
+											<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=04">기초생활수급자 및 차상위계층</a></li>
+											<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=05">북한이탈주민 및 외국인</a></li>
+											<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=06">특수교육대상자</a></li>
+											<li><a href="/servlet/EntNewServlet?strCmd=newnoti&newType=07">농어촌 학생</a></li>
+										</ul>
+									</li>
+									<li><a href="/ent/ent/ent_step0.jsp?regEntType=new">지원서 작성</a></li>
+								</ul>														
+							</li>
+							
+													
+							<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti">편입학</a>
+							<ul>
+								<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=01">모집요강</a>
+									<ul>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=01">일반전형</a></li>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=02">산업체위탁</a></li>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=03">군위탁</a></li>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=04">학사편입</a></li>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=05">기초생활수급자 및 차상위계층</a></li>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=06">북한이탈주민 및 외국인</a></li>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=07">특수교육대상자</a></li>
+										<li><a href="/servlet/EntAmsServlet?strCmd=amsnoti&amsType=08">농어촌 학생</a></li>
+									</ul>
+								</li>
+								<li><a href="/ent/ent/ent_step0.jsp?regEntType=ams">지원서 작성</a></li>
+							</ul>							
+						</li>	
+
+							<li><a href="/servlet/EntTimServlet?strCmd=timnoti">시간제</a>
+								<ul>
+									<li><a href="/servlet/EntTimServlet?strCmd=timnoti">모집요강</a></li>
+									<li><a href="/ent/ent/ent_step0.jsp?regEntType=tim">지원서 작성</a></li>
+								</ul>														
+							</li>
+							<li><a href="/servlet/EntPdsServlet?cmd=notlist&amp;bbscode=1">입학상담실</a>
+								<ul>
+									<li><a href="/servlet/EntPdsServlet?cmd=notlist&amp;bbscode=1">입학공지</a></li>
+									<li><a href="/ent/cst/entcst_faquentr.jsp">자주묻는질문</a></li>
+									<li><a href="/servlet/EntCstServlet?cmd=list&amp;bbscode=2">입학 Q&amp;A</a></li>
+									<li><a href="/servlet/EntPdsServlet?cmd=list&bbscode=4">입학 자료실</a></li>
+									<li><a href="/ent/pds/entpds_brchrqst.jsp">입학자료 신청</a></li>
+									<li><a href="/ent/pds/entpds_admission.jsp">입학설명회 신청</a></li>
+									<li><a href="/ent/cst/entcst_teleinfo.jsp">상담전화안내</a></li>
+								</ul>
+							</li>
+																									
+							<li>
+								
+								<a href="/ent/ent/step_index.jsp">나의지원관리</a>
+								
+								<!-- <a href="/ent/ent/ent_step0.jsp">나의지원관리</a> -->
+								
+							<ul>
+								<li>
+									<a href="/ent/ent/ent_step0.jsp">지원서 관리</a>
+								</li>
+								<li><a href="/servlet/EntMngServlet?cmd=scrn">전형료 납부</a></li>
+								<li><a href="/servlet/EntMngServlet?cmd=selfintroduce">자기소개서</a></li>
+								<li><a href="/servlet/EntMngServlet?cmd=essay_info">학업소양검사</a></li>
+								<li><a href="/servlet/EntMngServlet?cmd=doccheck">구비서류제출</a></li>
+								<li><a href="/servlet/EntMngServlet?cmd=finalCheck">지원현황</a></li>
+								<li><a href="/servlet/EntMngServlet?cmd=passcheck">합격확인</a></li>
+								<li><a href="/servlet/HakjukServlet?cmd=giveupinfo">입학포기신청</a></li>
+							</ul>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</li>
+								
+			<li>
+				<dl>
+					<dt><a href="/bch/sch/bchsch_schemain.jsp">학사안내</a></dt>
+					<dd>
+						<ul>
+							<li><a href="/bch/sch/bchsch_schemain.jsp">학사일정</a></li>
+							<li><a href="/bch/brl/bchbrl_majorule.jsp">학사제도</a>
+								<ul>
+									<li><a href="/bch/brl/bchbrl_majorule.jsp">전공제도</a></li>
+									<li><a href="/bch/brl/bchbrl_finish.jsp">학점이수표</a></li>
+									<li><a href="/bch/brl/bchbrl_schlmang.jsp">학사운영</a></li>
+									<li><a href="/bch/brl/bchbrl_plan.jsp">학습방법</a></li>
+									<li><a href="/bch/brl/bchbrl_lectaply.jsp">수강신청/수강철회</a></li>
+									<li><a href="/bch/brl/bchbrl_chanentr.jsp">편입학 학점인정</a></li>
+									<li><a href="/bch/brl/bchbrl_test.jsp">시험</a></li>
+									<li><a href="/bch/brl/bchbrl_scorvalu.jsp">성적평가</a></li>
+									<li><a href="/bch/brl/bchbrl_season.jsp">계절학기</a></li>
+									<li><a href="/bch/brl/bchbrl_creditexchange.jsp">학점교류</a></li>
+									<li><a href="/bch/brl/bchbrl_gradrule.jsp">졸업제도</a></li>
+									<li><a href="/servlet/LecPlanServlet?flag=1">강의계획서</a></li>
+									<li><a href="/bch/brl/bchbrl_cert.jsp">민간자격소개</a></li>
+								</ul>
+							</li>
+							<li><a href="/bch/chg/bchchg_absnschl.jsp">학적변동</a>
+								<ul>
+									<li><a href="/bch/chg/bchchg_absnschl.jsp">휴학</a></li>
+									<li><a href="/bch/chg/bchchg_comeback.jsp">복학</a></li>
+									<li><a href="/bch/chg/bchchg_leavschl.jsp">자퇴/제적</a></li>
+									<li><a href="/bch/chg/bchchg_reentran.jsp">재입학</a></li>
+									<li><a href="/bch/chg/bchchg_chandept.jsp">전과(부)</a></li>
+									<li><a href="/bch/chg/bchchg_revision.jsp">학적부 기재사항 정정</a></li>
+								</ul>
+							</li>
+							<li><a href="/bch/rul/bchrul_regula00.jsp">학칙</a></li>
+							<li><a href="/bch/srl/bchsrl_fundtype.jsp">장학제도</a>
+								<ul>
+									<li><a href="/bch/srl/bchsrl_fundtype.jsp">장학종류</a></li>
+									<li><a href="/bch/srl/bchsrl_fundrule.jsp">장학지급규정</a></li>
+									<li><a href="/bch/srl/bchsrl_fundloan.jsp">학자금대출</a></li>
+								</ul>
+							</li>
+							<li><a href="/bch/grs/bchgrs_01.jsp">대학원진학안내</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/dep/dep_index.jsp">학부소개</a></dt>
+					<dd>
+						<ul>
+							<li><a href="/dep/eng/depeng_subject1.jsp">영어학부</a></li>
+							<li><a href="/dep/chn/depchn_subjects.jsp">중국어학부</a></li>
+							<li><a href="/dep/jpn/depjpn_subjects.jsp">일본어학부</a></li>
+							<li><a href="/dep/kor/depkor_subjects.jsp">한국어학부</a></li>
+							<li><a href="/dep/spn/depspn_subjects.jsp">스페인어학부</a></li>
+							<li><a href="/dep/ase/depase_subject.jsp" class="spacing">베트남·인도네시아학부</a></li>
+							<li><a href="/dep/fin/depfin_subjects.jsp">금융회계학부</a></li>
+							<li><a href="/dep/man/depman_subject.jsp">지방 행정·의회 학부</a></li>
+							
+							<li><a href="/dep/cul/depcul_subject1.jsp">교양학부</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/clf/clf_index.jsp">대학생활</a></dt>
+					<dd>
+						<ul>
+							<li><a href="/clf/lic/clflic_onlngude.jsp" class="spacing">사이버한국외대 체험관</a>
+								<ul>
+									<li><a href="/clf/lic/clflic_onlngude.jsp">온라인강의안내</a></li>
+									<!-- li><a href="/clf/lic/clflic_clssroom1.jsp">강의맛보기</a></li -->
+									<li><a href="/clf/lic/clflic_clssroom2.jsp">우수강의맛보기</a></li>
+									<li><a href="/clf/lic/clflic_words.jsp">외국어 단어 mp3</a></li> 
+								</ul>
+							</li>
+							
+							<li><a href="/servlet/BbsBrdServlet?cmd=list&amp;bbscode=SLEC_QNA_1">오프/화상 특강</a></li>
+							<li><a href="/clf/cul/clfcul_main.jsp">CUFS교양in</a>
+								<ul>
+									<li><a href="/servlet/SpeLecServlet">교양특강</a></li> 
+									<li><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=COM_NTC_8">웰빙CUFS</a></li>
+									<li><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=EDUF_NTC_1">새벽편지</a></li>
+									<!-- li><a href="/servlet/EduinBrdServlet?cmd=list&amp;bbscode=EDUR_PIC_1">릴레이특강</a></li-->
+									<!--li><a href="/servlet/EduinBrdServlet?cmd=list&bbscode=EDUK_NTC_1">우리말나들이</a></li-->
+								</ul>
+							</li>
+							<li><a href="http://www.cufsminerva.com/" target="_blank" title="새창">CUFS 웹진 미네르바</a></li>
+							<li><a href="/clf/ass/clfass_certgude.jsp">학생지원센터</a>
+								<ul>
+									<li><a href="/clf/ass/clfass_certgude.jsp">학생증 발급</a></li>
+									<li><a href="/clf/ass/clfass_subcert1.jsp">증명서 발급</a></li>
+									<li><a href="/servlet/SisulReqServlet?cmd=main">오프라인 시설지원</a></li>
+									<li><a href="/clf/ass/clfass_studasst.jsp">인터넷서점</a></li>
+									<li><a href="/clf/ass/clfass_military1.jsp">병무생활</a></li>
+									<li><a href="/clf/ass/clfass_clinic.jsp">성평등 상담실</a></li>
+									<li><a href="/clf/ass/clfass_langeduc.jsp">어학교육원</a></li>
+									<li><a href="/clf/ass/clfass_career1.jsp">경력개발센터</a></li>
+									<li><a href="/clf/ass/clfass_elibrary.jsp">도서관</a></li>
+									<li><a href="/clf/gui/clfgui_hsp.jsp">학생복지</a></li>
+									<li><a href="/clf/ass/clfass_support1_1.jsp">장애학생지원</a></li>
+								</ul>
+							</li>
+							<li><a href="/clf/gui/clfgui_main.jsp">CUFS길라잡이</a>
+								<ul>
+									<li><a href="/clf/gui/clfgui_ot_01.jsp ">학교생활OT</a></li>
+									<li><a href="/clf/gui/clfgui_compu_01.jsp">CUFS 컴퓨터특강</a></li>
+									<!--li><a href="/clf/gui/clfgui_toeiccbt.jsp">TOEIC&CBT</a></li-->
+								</ul>
+							</li>
+							<li><a href="/clf/hlp/clfhlp_helpmain.jsp">HELP DESK</a>
+								<ul>
+									<li><a href="/clf/hlp/clfhlp_downlist.jsp">수강시준비사항</a></li>
+									<li><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_QNA_2">학습/학사도우미</a></li>
+									<li><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_QNA_1">시스템도우미</a></li>
+									<li><a href="/servlet/HlpDskServlet?cmd=add&amp;bbscode=COM_QNA_6">불편불만접수센터</a></li>
+									<!--li><a href="/servlet/HlpDskServlet?cmd=list&amp;bbscode=COM_NTC_11">정보보호관리</a></li-->
+									<li><a href="/clf/hlp/clfhlp_faqufrst.jsp">FAQ</a></li>
+									<li><a href="/clf/hlp/clfhlp_helpcont.jsp">원격접속요청</a></li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/servlet/MyCufsServlet?">강의실</a></dt>
+					<dd>
+						<ul>
+							<li><a href="/servlet/StdSbsServlet?cmd=coo_lec_room">수강과목</a></li>
+							<li><a href="/cuf/service/service.jsp">학사관리</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</li>
+			<li class="end">
+				<dl>
+					<dt><a href="/cmt/cmt_index.jsp">CUFS광장</a></dt>
+					<dd>
+						<ul>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A01">영어학부</a></li>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A10">중국어학부</a></li>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A11">일본어학부</a></li>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A22">한국어학부</a></li>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A23">스페인어학부</a></li>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=A31" class="spacing">베트남·인도네시아학부</a></li>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=C23">금융회계학부</a></li>
+							<li><a href="/cmt/mdp/index_std.jsp?selected_hakgwa=C20" class="spacing">지방 행정·의회 학부</a></li>
+							<li><a href="/servlet/AssMainServlet">총학생회</a></li>
+							<li><a href="/servlet/ClubMainServlet">동아리</a></li>
+							
+						</ul>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</nav>
+
+				</div>
+				<input type="button" id="allmenuModalClose" value="닫기" class="modalClose">
+				
+			</div>
+		</div>
+		<div class="ModalShadow"></div>
+	</div>
+		
+<!-- AceCounter Log Gathering Script V.7.5.2013010701  -->
+<script language='javascript'>
+	var _AceGID=(function(){var Inf=['gtp20.acecounter.com','8080','AH5A34268235699','AW','0','NaPm,Ncisy','ALL','0']; var _CI=(!_AceGID)?[]:_AceGID.val;var _N=0;var _T=new Image(0,0);if(_CI.join('.').indexOf(Inf[3])<0){ _T.src =( location.protocol=="https:"?"https://"+Inf[0]:"http://"+Inf[0]+":"+Inf[1]) +'/?cookie'; _CI.push(Inf);  _N=_CI.length; } return {o: _N,val:_CI}; })();
+	var _AceCounter=(function(){var G=_AceGID;if(G.o!=0){var _A=G.val[G.o-1];var _G=( _A[0]).substr(0,_A[0].indexOf('.'));var _C=(_A[7]!='0')?(_A[2]):_A[3];	var _U=( _A[5]).replace(/\,/g,'_');var _S=((['<scr','ipt','type="text/javascr','ipt"></scr','ipt>']).join('')).replace('tt','t src="'+location.protocol+ '//cr.acecounter.com/Web/AceCounter_'+_C+'.js?gc='+_A[2]+'&py='+_A[4]+'&gd='+_G+'&gp='+_A[1]+'&up='+_U+'&rd='+(new Date().getTime())+'" t');document.writeln(_S); return _S;} })();
+</script>
+<noscript><img src='http://gtp20.acecounter.com:8080/?uid=AH5A34268235699&je=n&' border=0 width=0 height=0 alt='acecounter'></noscript>	
+
+<!-- AceCounter Log Gathering Script End --> 
+
+
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 949428811;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="googleads" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/949428811/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+
+
+<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"> </script> 
+
+<script type="text/javascript"> 
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_4d6f422a70aa";
+if (!_nasa) var _nasa={};
+wcs.inflow();
+wcs_do(_nasa);
+</script>
+
+
+<!-- AceClick WebSite Gathering Script V0.9.20131114 -->
+<script type="text/Javascript">
+if(typeof(AMRS_GC)=='undefined'){
+var AMRS_O=[];var AMRS_CK = new Image();var AMRS_GC='AG2A398933751';var AMRS_GD='mrsg.aceclick.co.kr';var AMRS_GP='8080';var AMRS_TI=(new Date()).getTime();
+var AMRS_PR = location.protocol=="https:"?"https://"+AMRS_GD+":843":"http://"+AMRS_GD+":"+AMRS_GP; AMRS_CK.src = AMRS_PR+'/?cookie'; 
+if(typeof(Array.prototype.push)!='undefined'){ AMRS_O.push(AMRS_CK);}
+document.writeln("<scr"+"ipt type='text/Javascript' src='"+location.protocol+"//mrss.aceclick.co.kr/aceclick.js?rt="+AMRS_TI+"'></scr"+"ipt>");
+}
+</script>
+
+<!-- AceClick WebSite Gathering Script End V0.9.20131114 -->
+
+<!-- WIDERPLANET  SCRIPT START 2015.11.23 -->
+<div id="wp_tg_cts" style="display:none;"></div>
+<script type="text/javascript">
+var wptg_tagscript_vars = wptg_tagscript_vars || [];
+wptg_tagscript_vars.push(
+(function() {
+	return {
+		wp_hcuid:"",   /*Cross device targeting을 원하는 광고주는 로그인한 사용자의 Unique ID (ex. 로그인 ID, 고객넘버 등)를 암호화하여 대입.
+				*주의: 로그인 하지 않은 사용자는 어떠한 값도 대입하지 않습니다.*/
+		ti:"24537",	/*광고주 코드*/
+		ty:"Home",	/*트래킹태그 타입*/
+		device:"web"	/*디바이스 종류 (web 또는 mobile)*/
+		
+	};
+}));
+</script>
+<script type="text/javascript" async src="//astg.widerplanet.com/js/wp_astg_4.0.js"></script>
+
+<!-- // WIDERPLANET  SCRIPT END 2015.11.23 -->
+
+<!-- RealClick 리얼타겟팅 Checking Script V.20130115 Start-->
+<script type='text/javascript'>
+function loadrtgJS(b,c){var d=document.getElementsByTagName("head")[0],a=document.createElement("script");a.type="text/javascript";null!=c&&(a.charset="euc-kr");a.src=b;d.appendChild(a)}function load_rtg(b){loadrtgJS(("https:"==document.location.protocol?" https://":" http://")+b,"euc-kr")}load_rtg("event.realclick.co.kr/rtarget/rtget.js?rtcode=cyberedu");
+</script>
+
+<!-- RealClick 리얼타겟팅 Checking Script V.20130115 End -->
+<!-- EDN 리타겟팅 스크립트 -->
+<script type='text/javascript' src="https://adcheck.about.co.kr/mad/prd/view?shopid=cufs123"></script>
+<!-- Google Analytics 추적코드 2017-04-26 -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ 
+  ga('create', 'UA-93233825-1', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+	
+<script>
+	function openOutlook(){
+		var frm = document.mailform;
+		frm.user_id.value = "";
+		frm.type.value = "stu";
+		window.open('', 'Mail_pop', '');
+		frm.target = 'Mail_pop';
+		//if(frm.user_id.value != "")	frm.action = 'http://livemail.cufs.ac.kr/Private.aspx';
+		//else 	frm.action = 'http://livemail.cufs.ac.kr';
+		frm.method = "get";
+
+		if("" != ""){
+			frm.action = 'http://outlook.com/cufs.ac.kr';		
+		}else{
+			frm.action = 'http://livemail.cufs.ac.kr';
+		}
+		frm.submit();
+	}
+	
+	function userCheck(){
+		alert("교수자는 홈페이지에서 개인정보를 수정할 수 없습니다. \n 비밀번호는 교수자 사이트에서 변경하신 비밀번호와 동일하게 사용가능합니다.");
+		return;
+	}	
+	
+	function change_lecture_foot() {
+		var obj = document.myClassForm.selected_leccode;
+		var leccode = obj.options[obj.selectedIndex].value;
+		document.myClassForm.selected_leccode.value = leccode;
+		document.myClassForm.action = "/cuf/myclass/index_std.jsp";
+		document.myClassForm.submit();
+	}
+	
+	function mymenuCheck(){
+		var maxCount = 10;	//최대갯수
+		var mymenuFrom = document.mymenuFrom;
+		var checkCount = 0;
+		for(var i=0;i < mymenuFrom.mencode.length;i++){
+			if(mymenuFrom.mencode[i].checked){
+				checkCount = checkCount+1;
+			}
+		}
+		if(checkCount < maxCount){
+			mymenuFrom.submit();
+		}else{
+			alert(maxCount+"개 이상 드록 할수 없습니다.");
+		}
+	}
+	
+	function getCookie (name) {
+		var arg = name + "=";
+		var alen = arg.length;
+		var clen = document.cookie.length;
+		var i = 0;
+		while (i < clen) {
+		    var j = i + alen;
+		    if (document.cookie.substring(i, j) == arg)
+		      return getCookieVal (j);
+		    i = document.cookie.indexOf(" ", i) + 1;
+		    if (i == 0) break;
+		}
+		return null;
+	}
+	
+	function getCookieVal (offset) {
+		  var endstr = document.cookie.indexOf (";", offset);
+		  if (endstr == -1)
+		    endstr = document.cookie.length;
+		  return unescape(document.cookie.substring(offset, endstr));
+		}
+		
+	function menuload(){
+	    var id = getCookie("ac.cufs.mymenu");    
+		 if(id != null && id != ""){	 
+	    	$("#mymenuWrap").fadeOut();
+			$("#mymenuOpen").fadeIn();
+	    } else {
+	    	$("#mymenuWrap").fadeIn();
+			$("#mymenuOpen").fadeOut();
+	    }
+	}
+</script>
+
+
+
+
+
+
+<!--[if lt IE 8]>
+	<script src="/js/_lib/jquery.placeholder.js"></script> 
+	<script> $("input").placeholder(); </script>
+<![endif]-->
+
+
+
+
+
+
+<div style="display:none">
+ <iframe name="filedownframe" title="파일다운로드프레임"></iframe>
+</div>
+<!-- livemail form  -->
+<form name="mailform" action="" method="post">
+	<input type="hidden" name="user_id" value=""/>
+	<input type="hidden" name="type" value=""/>
+</form>
+<!-- livemail form  -->
+<!-- script type="text/javascript">initNavigation();</script-->
+<div id="infoinfo">
+
+	<div class="infoWrap hidden">
+
+	<strong>/clf//eduin/forbrd_eduinview.jsp</strong>
+	<div id="infoinfoHandler">
+		<a href="#none" id="infoinfoClose">닫기</a>
+		<a href="#none">위로</a>
+	</div>
+	<div>
+		strCat: <strong class="colorC">CLF</strong>,
+		strTopMain: <strong class="colorC">06</strong>,
+		strTopSub : <strong class="colorC">02</strong>,
+		strSubMain : <strong class="colorC">02</strong><br>
+		strSubSub : <strong class="colorG">04</strong>
+		strSubSubSub : <strong class="colorG"></strong>
+		strSubSubSubSub : <strong class="colorG"></strong>
+	</div>
+
+	</div>
+</div>
+<!-- AceCounter Log Gathering Script V.7.5.2013010701 
+<script language='javascript'>
+	var _AceGID=(function(){var Inf=['gtp20.acecounter.com','8080','AH5A34268235699','AW','0','NaPm,Ncisy','ALL','0']; var _CI=(!_AceGID)?[]:_AceGID.val;var _N=0;var _T=new Image(0,0);if(_CI.join('.').indexOf(Inf[3])<0){ _T.src =( location.protocol=="https:"?"https://"+Inf[0]:"http://"+Inf[0]+":"+Inf[1]) +'/?cookie'; _CI.push(Inf);  _N=_CI.length; } return {o: _N,val:_CI}; })();
+	var _AceCounter=(function(){var G=_AceGID;if(G.o!=0){var _A=G.val[G.o-1];var _G=( _A[0]).substr(0,_A[0].indexOf('.'));var _C=(_A[7]!='0')?(_A[2]):_A[3];	var _U=( _A[5]).replace(/\,/g,'_');var _S=((['<scr','ipt','type="text/javascr','ipt"></scr','ipt>']).join('')).replace('tt','t src="'+location.protocol+ '//cr.acecounter.com/Web/AceCounter_'+_C+'.js?gc='+_A[2]+'&py='+_A[4]+'&gd='+_G+'&gp='+_A[1]+'&up='+_U+'&rd='+(new Date().getTime())+'" t');document.writeln(_S); return _S;} })();
+</script>
+<noscript><img src='http://gtp20.acecounter.com:8080/?uid=AH5A34268235699&je=n&' border=0 width=0 height=0 alt='acecounter'></noscript>	
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 949428811;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/949428811/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+539-->
+<!-- AceCounter Log Gathering Script End --> 
+
+
+
+</body>
+</html>
