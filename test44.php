@@ -383,7 +383,7 @@
         //console.log(canvas.toDataURL.replace("data:image/png;base64,",""));
         //console.log(canvas.toDataURL);
 
-
+        
 
     </script>
 </body>
