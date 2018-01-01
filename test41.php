@@ -352,7 +352,7 @@
     -->
 
 <hr />
-<canvas id="drawing" style="display: none"></canvas>
+<canvas id="drawing" style="display: block"></canvas>
     <img id="itest" src="">
 
     <script type="application/javascript">
@@ -373,8 +373,8 @@
         //var myImage = document.getElementById('itest');
         //myImage.src = canvas.toDataURL();
 
-        //console.log(MD5(canvas.toDataURL()));
-        document.write(MD5(canvas.toDataURL()));
+        console.log(MD5(canvas.toDataURL("image/jpeg")));
+        document.write(MD5(canvas.toDataURL("image/jpeg")));
         document.write("<br />");
         getUserIP(function (ip) {
             alert(ip);
