@@ -1,0 +1,127 @@
+
+<html>
+<head>
+    <meta charset="utf8" />
+    <script type="text/javascript" src="//compasscdn.adop.cc/js/prebid1_21.js" async></script>
+    <script type="text/javascript" src="apt.js" ></script>
+    <script>
+        var adoptag = adoptag || {};
+        adoptag.cmd = adoptag.cmd || [];
+
+        adoptag.cmd.push(function () {
+            adoptag.defineSlotH("a8964207-7654-4612-9759-39810d6bff81", [300, 250], "A");
+            adoptag.defineSlotH("96b04e1a-1176-491b-bd0e-1b2410d73fc9", [160, 600], "B");
+            adoptag.defineSlot("6fa354a5-51d5-477b-8c30-9fc6cc8f9828", [160, 600], "A");
+            adoptag.defineSlot("59afaee2-278a-4637-98d8-08afe58360b8", [320, 100], "A");
+        });
+
+    </script>
+    <script>
+
+        pbjs.floor_price = 0.6;
+        pbjs.bidtrace = true;
+        pbjs.que.push(function() {
+            var adUnits = [{
+                code: '96b04e1a-1176-491b-bd0e-1b2410d73fc9',
+                mediaTypes: {
+                    banner: {
+                        sizes: [[160, 600]]
+                    }
+                },
+                bids: [
+                    {
+                        bidder: 'appnexus',
+                        params: {
+                            placementId: 13144370
+                        }
+                    },
+                    {
+                        bidder: 'openx',
+                        params: {
+                            unit: '540267098',
+                            delDomain: 'adopkorea-d.openx.net'
+                        }
+                    }
+                ]
+            },{
+                code: 'a8964207-7654-4612-9759-39810d6bff81',
+                mediaTypes: {
+                    banner: {
+                        sizes: [[300, 250]]
+                    }
+                },
+                bids: [
+                    {
+                        bidder: 'appnexus',
+                        params: {
+                            placementId: 13144370
+                        }
+                    },
+                    {
+                        bidder: 'openx',
+                        params: {
+                            unit: '540267098',
+                            delDomain: 'adopkorea-d.openx.net'
+                        }
+                    }
+                ]
+
+            }];
+            pbjs.addAdUnits(adUnits);
+            pbjs.requestBids({
+                bidsBackHandler: adoptag.floorPrice001
+            });
+        });
+
+    </script>
+
+
+
+
+</head>
+<body>
+<!-- <script  src='http://compass.adop.cc/assets/js/adop/adopHB.js?v=14' ></script> -->
+
+<hr />
+광고영역 : a8964207-7654-4612-9759-39810d6bff81 헤더비딩
+<div id="a8964207-7654-4612-9759-39810d6bff81">
+    <script>
+        adoptag.cmd.push(function () {
+            adoptag.display("a8964207-7654-4612-9759-39810d6bff81");
+        });
+    </script>
+</div>
+<hr />
+광고영역 : 96b04e1a-1176-491b-bd0e-1b2410d73fc9 헤더비딩
+<div id="96b04e1a-1176-491b-bd0e-1b2410d73fc9">
+    <script>
+        adoptag.cmd.push(function () {
+            adoptag.display("96b04e1a-1176-491b-bd0e-1b2410d73fc9");
+        });
+    </script>
+</div>
+<hr />
+광고영역 : 6fa354a5-51d5-477b-8c30-9fc6cc8f9828 일반베너
+<div id="6fa354a5-51d5-477b-8c30-9fc6cc8f9828">
+    <script>
+        adoptag.cmd.push(function () {
+            adoptag.display("6fa354a5-51d5-477b-8c30-9fc6cc8f9828");
+        });
+    </script>
+</div>
+<hr />
+광고영역 : 59afaee2-278a-4637-98d8-08afe58360b8 일반베너
+<div id="59afaee2-278a-4637-98d8-08afe58360b8">
+    <script>
+        adoptag.cmd.push(function () {
+            adoptag.display("59afaee2-278a-4637-98d8-08afe58360b8");
+        });
+    </script>
+</div>
+
+
+
+
+
+</body>
+</html>

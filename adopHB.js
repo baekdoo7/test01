@@ -144,7 +144,7 @@ function adopRun005(){
         }
         $adp.className = "adsbyadop_" + __params_zone + rand_code ;
 
-        __url = '//compasstest.adop.cc/RE/' + encodeURIComponent(__params_zone);
+        __url = '//compass.adop.cc/RE/' + encodeURIComponent(__params_zone);
         for(var k in __params){
             params += encodeURIComponent(k) + '=' + encodeURIComponent(__params[k]) + '&'
         }

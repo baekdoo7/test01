@@ -5,6 +5,10 @@
 	
 	//$version = $memcache->getversion();
 	//phpinfo();
+
+$a= 1;
+$b= 1;
+$c= $a + $b;
 	
 ?>
 <!DOCTYPE html>

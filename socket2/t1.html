@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='UTF-8' />
+	<style>
+		input, textarea {border:1px solid #CCC;margin:0px;padding:0px}
+		#body {max-width:800px;margin:auto}
+		#message {width:100%;line-height:20px}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="fancywebsocket.js"></script>
+	<script>
+		var Server;
+
+		function send( text ) {
+			Server.send( 'message', text );
+		}
+		$(document).ready(function() {
+			Server = new FancyWebSocket('ws://www.test01.com:9300');
+			$('#message').keyup(function(e) {
+				if ( e.keyCode == 13 && this.value ) {
+					$(this).val('');
+				}else{
+                    console.log(this.value);
+                    send( this.value );
+                }
+			});
+			Server.connect();
+		});
+	</script>
+</head>
+
+<body>
+	<div id='body'>
+		<input type='text' id='message' name='message' />
+	</div>
+</body>
+
+</html>

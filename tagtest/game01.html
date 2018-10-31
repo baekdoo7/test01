@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+
+    <script type="text/javascript"> $(document).ready(function () {
+
+        function mjb_maker() {
+            var index = Math.floor(Math.random() * 3) + 1;
+            var rtrval = '';
+            if (index == 1){
+                rtrval = 'mu'
+            }else if(index == 2){
+                rtrval = 'jj'
+            }else if(index == 3){
+                rtrval = 'jj'
+            }
+            return rtrval;
+        }
+
+        var socket = io.connect("http://13.125.62.224:8091/game");
+        // var socket = io.connect("http://127.0.0.1:5000/game");
+        socket.on('response', function (msg) {
+            if (msg.type == 'game_result'){
+                var game_id = $('#game_id').val();
+                socket.emit('request',{type:'mjb',uid:game_id,mjb:mjb_maker()});
+                console.log(msg);
+            }
+        });
+
+        $('#game_send').on('click',function () {
+            var game_id = $('#game_id').val();
+            socket.emit('request',{type:'setid',uid:game_id});
+            $('#game_send').attr('disabled',true);
+        })
+
+        $('#set_mjb').on('click',function () {
+            var game_id = $('#game_id').val();
+            socket.emit('request',{type:'mjb',uid:game_id,mjb:mjb_maker()});
+        })
+    }); </script>
+    <meta charset="UTF-8">
+    <title>websock test</title></head>
+<body><h1>Game</h1>
+<div id="received">
+
+</div>
+<div>
+    아이디 :: <input id="game_id" value="apple"><button type="button" id="game_send">제출</button>
+</div>
+<div>
+    <input id="input_mjb" value="mu"><button type="button" id="set_mjb">묵찌빠제출</button>
+</div>
+</body>
+</html>

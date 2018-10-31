@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+
+    <script type="text/javascript">
+        function get_mjb_img(mjb) {
+            if (mjb == 'mu')
+                result =  "{{url_for('static', filename='img/mu.png')}}";
+            else if (mjb == 'jj')
+                result =  "{{url_for('static', filename='img/jj.png')}}";
+            else
+                result =  "{{url_for('static', filename='img/bb.png')}}";
+
+            return result;
+        }
+
+        $(document).ready(function () {
+        var socket = io.connect("http://" + document.domain + ":" + location.port + "/game");
+        socket.emit('request',{type:'setid',uid:'broadcast'});
+        socket.on('response', function (msg) {
+            console.log(msg.type);
+            if (msg.type == 'get_user') {
+                if (msg.user_name != 'broadcast')
+                    $('#user_list').append('<p> ' + msg.user_name + '님이 입장하셧습니당</p>');
+            }
+            else if (msg.type == 'disconnect'){
+                    $('#user_list').append('<p> ' + msg.user_name + '님이 퇴장하셧씁니다.</p>');
+                }
+            else if (msg.type == 'game_result') {
+                var winner = msg.data[2];
+                var winner_user_name = msg.data[winner].user_name;
+                var p1_img = get_mjb_img(msg.data[0].user_mjb);
+                var p2_img = get_mjb_img(msg.data[1].user_mjb);
+
+                $('#game_result').append('<span><img width="50" height="50" src="'+p1_img+'"></span>');
+                $('#game_result').append('<span> ' + msg.data[0].user_name+'</span>');
+
+                $('#game_result').append('<span><img width="50" height="50" src="'+p2_img+'"></span>');
+                $('#game_result').append('<span> ' + msg.data[1].user_name+'</span>');
+                if (winner!=2)
+                    $('#game_result').append('<p> ' + winner_user_name+ '님이 승리하셧습니다..</p>');
+                else
+                    $('#game_result').append('<p> 무승부입니당.</p>');
+
+                $('#start').attr('disabled',true);
+            }
+            else if (msg.type == 'readygo'){
+                $('#start').attr('disabled',false);
+            }
+            else if (msg.type == 'total_result'){
+                console.log(msg.data);
+                $('#start').attr('disabled',false);
+            }
+        });
+
+        $('#start').on('click',function () {
+            socket.emit('request',{type:'start',uid:'broadcast'});
+        });
+
+        $('#end').on('click',function () {
+            socket.emit('request',{type:'end',uid:'broadcast'});
+        })
+    });
+    </script>
+    <meta charset="UTF-8">
+    <title>websock test</title></head>
+<body>
+<div>
+    <h1 style="align-content: center">가위바위보 게임</h1>
+
+        <span style="background-color: deeppink">
+            <label>유저 정보</label>
+            <div id="user_list">
+            </div>
+        </span>
+
+        <span style="background-color: aqua">
+            <label>게임 로그</label>
+            <div id="game_result">
+            </div>
+        </span>
+
+
+    <div>
+        <button type="button" id="start" disabled>게임시작</button><button type="button" id="end">게임종료</button>
+    </div>
+</div>
+</body>
+</html>

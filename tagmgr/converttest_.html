@@ -1,0 +1,105 @@
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Widgets Magazine</title>
+<style type="text/css" media="screen">
+</style>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+    var adopADshow = adopADshow || function(id,w,h,areaidx){
+        var $iframeTmp,obj,passbackLocal=true;  
+        var iurl = '//compass.adop.cc/RE/' + areaidx;
+        var strIframeId   = "adopB" + Math.floor(Math.random()*10000) + 1;
+        if (areaidx.indexOf('//') != -1){
+            passbackLocal = false;
+        }
+        $iframeTmp = document.createElement("IFRAME");
+        $iframeTmp.setAttribute('id',strIframeId);
+        $iframeTmp.setAttribute('border','none');
+        $iframeTmp.setAttribute('frameBorder',0);
+        $iframeTmp.setAttribute('marginWidth',0);
+        $iframeTmp.setAttribute('marginHeight',0);
+        $iframeTmp.setAttribute('paddingWidth',0);
+        $iframeTmp.setAttribute('paddingHeight',0);
+        $iframeTmp.setAttribute('width',w);
+        $iframeTmp.setAttribute('height',h);
+        $iframeTmp.setAttribute('scrolling','no');
+        
+        var strScriptLink = "<script src='"+iurl+"'><\/script>";
+         
+        obj = document.getElementById(id);
+        if(obj){
+            obj.setAttribute('class','adsbyadop_');
+            while(obj.hasChildNodes()){
+                    obj.removeChild(obj.firstChild);
+                  }
+            obj.appendChild($iframeTmp);
+        }else{
+            return null;
+        }
+        if(areaidx == 'ADOP_PBU'){
+           return null;
+        }
+        if(passbackLocal){
+            var passbackIframe = document.getElementById(strIframeId);
+            var passbackIframeDoc = passbackIframe.contentDocument || passbackIframe.contentWindow.document;
+            if(passbackIframeDoc != null){
+                passbackIframeDoc.open();
+                passbackIframeDoc.write(strScriptLink);
+                passbackIframeDoc.close();
+            }   
+        }
+        else{
+           var passbackIframe = document.getElementById(strIframeId);
+            passbackIframe.src = areaidx;
+        }
+        
+    };
+
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/5932629/ca-pub-1474238860523410-tag/1461757438', [[300,250]], 'div-gpt-ad-1530613899473-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().set("page_url", "compass.adop.cc");
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    if(event.isEmpty){
+        adopADshow('div-gpt-ad-1530613899473-0',300,250,'0c319ab4-905d-4a1f-b9a9-e2b662673e8b');   
+        //adopADshow('div-gpt-ad-1530613899473-0',300,250,'http://www.adop.cc');   
+        //adopADshow('div-gpt-ad-1530613899473-0',300,250,'ADOP_PBU');   
+        //ADOP_PBU
+    }    
+    //console.log(event.isEmpty);
+    //console.log(event);
+    //console.log(event.slot);
+        
+    
+});
+googletag.pubads().addEventListener('slotVisibilityChanged', function(event2) {
+console.log(event2.inViewPercentage);
+});
+
+    googletag.enableServices();
+  });
+</script>
+</head>
+<body>
+<!-- /5932629/Kaohoon/kaohoon_native_infeed -->
+<div id='div-gpt-ad-1530613899473-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1530613899473-0'); });
+</script>
+</div>
+</body>
+    
+    
+    
+    
+
+     
+    

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>배열 테스트</title> 
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script asnc src="j07.js"></script>
+        <script type="application/javascript">
+            var atmp = atmp || [];
+            
+            var eventify = function(arr, callback) {
+                            arr.push = function(e) {
+                                Array.prototype.push.call(arr, e);
+                                callback(arr);
+                                };
+                            };
+            var test01 = function(arr){
+                console.log(arr.pop());
+            }
+            eventify(atmp,test01)
+        </script>
+    </head>
+    
+    <body>
+        테스트 <br />
+  
+            
+        </script>
+    </body>
+</html>        

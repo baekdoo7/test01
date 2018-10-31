@@ -1,0 +1,49 @@
+
+<html>
+<head>
+<script type="text/javascript" src="//compasscdn.adop.cc/js/prebid1_21.js" async></script>
+<script type="text/javascript" src="//compasscdn.adop.cc/js/prebidadop1_15.js" ></script>
+<script>
+
+    pbjs.floor_price = 0.1;
+    pbjs.bidtrace = true;
+    pbjs.que.push(function() {
+        var adUnits = [{
+            code: 'a426dfe0-1a74-4ab9-9792-8ceadd5e2ff6',
+	   mediaTypes: {
+		banner: {
+            		sizes: [[300, 250]]
+		}
+	   },
+            bids: [
+                {
+                    bidder: 'appnexus',
+                    params: {
+                            placementId: 13144370
+                            }
+                },
+                {
+                    bidder: 'openx',
+                    params: {
+                        unit: '540267098',
+                        delDomain: 'adopkorea-d.openx.net'
+                        }
+                }
+            ]
+        }];
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            bidsBackHandler: floorPrice001
+        });
+    });
+
+</script>
+
+
+
+
+</head>
+<body>
+<script  src='http://compass.adop.cc/assets/js/adop/adopHB.js?v=14' ></script><ins class='adsbyadop' _adop_zon = 'a426dfe0-1a74-4ab9-9792-8ceadd5e2ff6' _adop_type = 'hb' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>
+</body>
+</html>

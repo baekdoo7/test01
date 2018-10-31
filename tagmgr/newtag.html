@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>뉴태그 테스트</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script asnc src="apt.js"></script>
+    <script>
+        var adoptag = adoptag || {};
+        adoptag.cmd = adoptag.cmd || [];
+
+        adoptag.cmd.push(function () {
+            adoptag.defineSlot("a8964207-7654-4612-9759-39810d6bff81", [300, 250], "A");
+            adoptag.defineSlotR({'300x250': 'a8964207-7654-4612-9759-39810d6bff81', '200x200': 'yyy-yyy-yyy', '120x600': 'zzz-zzz-zzz','600x600': 'qqq-qqq-qqq'}, "B");
+        });
+
+    </script>
+    <script type="application/javascript">
+        var atmp = atmp || [];
+        var eventify = function (arr, callback) {
+            arr.push = function (e) {
+                Array.prototype.push.call(arr, e);
+                callback(arr);
+            };
+        };
+        var test01 = function (arr) {
+            console.log(arr.pop());
+        }
+        eventify(atmp, test01)
+    </script>
+</head>
+
+<body>
+광고테스트 <br/>
+<br/>
+<div id="a8964207-7654-4612-9759-39810d6bff81">
+    <script>
+        adoptag.cmd.push(function () {
+            adoptag.display("a8964207-7654-4612-9759-39810d6bff81");
+        });
+    </script>
+</div>
+<div id="zzz-zzz-zzz">
+    <script>
+        adoptag.cmd.push(function () {
+            adoptag.display("zzz-zzz-zzz");
+        });
+    </script>
+</div>
+
+</body>
+</html>        
