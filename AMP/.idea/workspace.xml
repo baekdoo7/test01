@@ -25,41 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tagtest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tagtest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tagtest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="450">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convertAdxtoDfp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convertAdxtoDfp.php">
+      <file leaf-file-name="crawl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="19" column="115" lean-forward="false" selection-start-line="19" selection-start-column="107" selection-end-line="19" selection-end-column="115" />
+            <state relative-caret-position="195">
+              <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
               <folding>
-                <marker date="1539141968735" expanded="true" signature="9482:9626" ph="select * fro... advertise_ad2" />
-                <marker date="1539141968735" expanded="true" signature="10084:10350" ph="UPDATE advertise_ad2... " />
+                <marker date="1382239620000" expanded="true" signature="2414:2467" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convertAdxtoDfpNEW.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convertAdxtoDfpNEW.php">
+      <file leaf-file-name="testtmp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testtmp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1042">
-              <caret line="178" column="49" lean-forward="false" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="49" />
-              <folding>
-                <element signature="e#6#256#0#PHP" expanded="true" />
-                <marker date="1539141981351" expanded="true" signature="1697:1735" ph="select * fro... aSlot2Area" />
-                <marker date="1539141981351" expanded="true" signature="1697:1747" ph="select * fro... aSlot2Area" />
-                <marker date="1539141981351" expanded="true" signature="10119:10263" ph="select * fro... advertise_ad2" />
-                <marker date="1539141981351" expanded="true" signature="10721:10987" ph="UPDATE advertise_ad2... " />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="27" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,20 +72,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convertAdxtoDfpPageUrl_.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convertAdxtoDfpPageUrl_.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="985">
-              <caret line="290" column="0" lean-forward="true" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-              <folding>
-                <marker date="1540274126814" expanded="true" signature="1596:1655" ph="select * fro... i_site_info_tmp" />
-                <marker date="1540274126814" expanded="true" signature="7996:8140" ph="select * fro... advertise_ad2" />
-                <marker date="1540274126814" expanded="true" signature="8483:8749" ph="UPDATE advertise_ad2... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ampTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ampTest.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,34 +84,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transquote.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transquote.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="1235" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="1235" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plsql.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plsql.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plsql.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="707">
               <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sodaqtest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sodaqtest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="80" column="48" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#svg#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -173,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tagtest.php" />
         <option value="$PROJECT_DIR$/convertAdxtoDfp.php" />
         <option value="$PROJECT_DIR$/convertAdxtoDfpNEW.php" />
         <option value="$PROJECT_DIR$/siteinfo.php" />
@@ -184,6 +140,7 @@
         <option value="$PROJECT_DIR$/testtmp.php" />
         <option value="$PROJECT_DIR$/sodaqtest.php" />
         <option value="$PROJECT_DIR$/plsql.sql" />
+        <option value="$PROJECT_DIR$/tagtest.php" />
       </list>
     </option>
   </component>
@@ -195,7 +152,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2021" />
+    <option name="x" value="-2022" />
     <option name="y" value="134" />
     <option name="width" value="1689" />
     <option name="height" value="1194" />
@@ -346,15 +303,15 @@
       <updated>1536903024332</updated>
       <workItem from="1536903031191" duration="72689000" />
       <workItem from="1539769738473" duration="3860000" />
-      <workItem from="1540166088823" duration="11030000" />
+      <workItem from="1540166088823" duration="12654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87579000" />
+    <option name="totallyTimeSpent" value="89203000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2021" y="134" width="1689" height="1194" extended-state="0" />
+    <frame x="-2022" y="134" width="1689" height="1194" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -574,16 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ampTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="133" column="36" lean-forward="true" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/siteinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -592,32 +539,6 @@
             <marker date="1539146132844" expanded="true" signature="110:510" ph="select aa.*,... advertise_ad2" />
             <marker date="1539146132844" expanded="true" signature="619:666" ph="SELECT * FRO... i_site_info" />
             <marker date="1539146132844" expanded="true" signature="1869:1981" ph="UPDATE advertise_ad2... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testtmp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="27" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tagtest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sodaqtest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="80" column="48" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -635,10 +556,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simple_html_dom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sodaqtest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="80" column="48" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plsql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="707">
           <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ampTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="133" column="36" lean-forward="true" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testtmp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="27" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding>
+            <marker date="1382239620000" expanded="true" signature="2414:2467" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tagtest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
