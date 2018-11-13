@@ -16,7 +16,7 @@ echo "<hr />";
 
 echo changePurl($tmp,"오징어");
 */
-
+/*
 function changePurl($template,$purl){
     $cnt = preg_match("/adopADshow\([^,]*,[^,]*,[^,]*,'(.*?)'\s*\)/i",$template,$tmp1);
     if($cnt){
@@ -26,3 +26,7 @@ function changePurl($template,$purl){
 }
 $tmp = "1  adopADshow('div-apt-ad-7SD7j0q8Fy',320,50,'http://ad.adnmore.co.kr/cgi-bin/PelicanC.dll?impr&pageid=05qg&grade=3&out=iframe');";
 echo changePurl($tmp,"오징어");
+*/
+$string = "뭐래냐?";
+
+$tmp = iconv("EUC-KR","UTF-8", $string);
