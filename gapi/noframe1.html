@@ -1,0 +1,18 @@
+var ifr = document.createElement("iframe");
+ifr.setAttribute("id", "Btest" + Math.round(Math.random() * 10000)),
+ifr.setAttribute("frameborder", "0"),
+ifr.setAttribute("allowtransparency", "true"),
+ifr.setAttribute("hspace", "0"),
+ifr.setAttribute("marginwidth", "0"),
+ifr.setAttribute("marginheight", "0"),
+ifr.setAttribute("scrolling", "no"),
+ifr.setAttribute("vspace", "0"),
+ifr.setAttribute("width", "300px"),
+ifr.setAttribute("height", "250px");
+var obj = document.getElementById("t100");
+obj.appendChild(ifr);
+var iframeObj = ifr.contentWindow.document;
+var inTxt = "<script async='async' src='//compass.adop.cc/assets/js/adop/adopJ.js?v=14' charset='UTF-8'></scr"+"ipt><ins class='adsbyadop' _adop_zon = 'e6f26c4e-f452-4c5c-b0f7-98105942152d' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>";
+    iframeObj.open();
+    iframeObj.write(inTxt);
+    iframeObj.close();

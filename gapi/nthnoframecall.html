@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>n번째 노프레임 생성</title>
+    <script>
+
+        function testgo123() {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("id", "Btest" + Math.round(Math.random() * 10000)),
+                ifr.setAttribute("frameborder", "0"),
+                ifr.setAttribute("allowtransparency", "true"),
+                ifr.setAttribute("hspace", "0"),
+                ifr.setAttribute("marginwidth", "0"),
+                ifr.setAttribute("marginheight", "0"),
+                ifr.setAttribute("scrolling", "no"),
+                ifr.setAttribute("vspace", "0"),
+                ifr.setAttribute("width", "300px"),
+                ifr.setAttribute("height", "250px");
+            var obj = document.getElementById("t100");
+            obj.appendChild(ifr);
+            var iframeObj = ifr.contentWindow.document;
+            var inTxt = "<body><div id='t100'></div><scr" + "ipt src='noframe.php?cnt=1'></scr" + "ipt></body>";
+            iframeObj.open();
+            iframeObj.write(inTxt);
+            iframeObj.close();
+        }
+
+    </script>
+</head>
+<body>
+
+<div id="t100"></div>
+<script src="noframe.php?cnt=3"></script>
+</body>
+</html>
+
+
+
+

@@ -6,7 +6,6 @@
  * Time: PM 4:32
  */
 
-
 $mainDomain     = '' ;
 $ampTitle       = '' ;
 $ampContents    = '' ;
@@ -29,10 +28,18 @@ include("siteTagInfo.php");
 
 
 function getKeyWord($str){
+    global $siteInfo,$mainDomain;
     $retArray = array();
+    $noKeyword = array("을 ","를 ","은 ","는 ","이 ","가 ","에게 ","에서 ","로 ","대로 ","의 ");
+    $noKeyword = array_merge($noKeyword,$siteInfo[$mainDomain]['deletekeyword']);
 
+var_dump($noKeyword);
+exit();
     $tmp01 = preg_replace("/[ #\&\+\-%@=\/\:;,\.'\"\^`~\_|\!\?\*$#<>()\[\]\{\}]/i"," ",$str);
     $tmp01 = preg_replace("/[\s]+/i"," ", $tmp01);
+    $tmp01 = str_replace($noKeyword," ",$tmp01);
+
+
     $tmp01 = preg_split("/[\s]/i", $tmp01);
     $tmp02 = array_count_values($tmp01);
 
@@ -80,8 +87,8 @@ function getDomainName($url)
  return $parse['host'];
 }
 //read from element
-function getFromElement($ele,$tar){
-    return $ele->find($tar,0);
+function getFromElement($ele,$tar,$ord=0){
+    return $ele->find($tar,$ord);
 }
 //read from pattern
 function getFromPattern($txt,$ptn){
@@ -97,9 +104,6 @@ function getFromPattern($txt,$ptn){
 //title read
 function getTitle(){
     global $html,$ampTitle,$siteInfo,$mainDomain;
-    //$ampTitle = $html->find($siteInfo[$mainDomain]['title'][1],0)->plaintext;
-    //var_dump($siteInfo[$mainDomain]);
-    //echo $siteInfo[$mainDomain]['title'][0]; exit();
     if($siteInfo[$mainDomain]['title'][0] == 1) {
         $ampTitle = getFromElement($html, $siteInfo[$mainDomain]['title'][1])->plaintext;
     }
@@ -165,6 +169,12 @@ function getWroteDate(){
     elseif ($siteInfo[$mainDomain]['wrotedate'][0] == 2){
         $wroteDate = getFromPattern($html,$siteInfo[$mainDomain]['wrotedate'][1])    ;
     }
+    elseif ($siteInfo[$mainDomain]['wrotedate'][0] == 3){
+        $wroteDate = perfect_url(getFromElement($html, $siteInfo[$mainDomain]['wrotedate'][1])->getAttribute($siteInfo[$mainDomain]['wrotedate'][2]),$siteUrl);
+    }
+    elseif ($siteInfo[$mainDomain]['wrotedate'][0] == 4){
+        $wroteDate = getFromElement($html, $siteInfo[$mainDomain]['wrotedate'][1],$siteInfo[$mainDomain]['wrotedate'][2])->plaintext;
+    }
     else{
         $wroteDate = 'No Setting!';
     }
@@ -180,6 +190,15 @@ function getWriter(){
     }
     elseif ($siteInfo[$mainDomain]['writer'][0] == 2){
         $writer = getFromPattern($html,$siteInfo[$mainDomain]['writer'][1])    ;
+    }
+    elseif ($siteInfo[$mainDomain]['writer'][0] == 3){
+        $writer = perfect_url(getFromElement($html, $siteInfo[$mainDomain]['writer'][1])->getAttribute($siteInfo[$mainDomain]['writer'][2]),$siteUrl);
+    }
+    elseif ($siteInfo[$mainDomain]['writer'][0] == 4){
+        $writer = getFromElement($html, $siteInfo[$mainDomain]['writer'][1],$siteInfo[$mainDomain]['writer'][2])->plaintext;
+    }
+    elseif ($siteInfo[$mainDomain]['writer'][0] == 5){
+        $writer = getFromElement($html, $siteInfo[$mainDomain]['writer'][1])->getAttribute($siteInfo[$mainDomain]['writer'][2]);
     }
     else{
         $writer = 'No Setting!';
@@ -227,7 +246,7 @@ function getConts(){
 }
 //contents crawl
 function cnts_crawl(){
-    global $html,$siteUrl,$mainDomain;
+    global $html,$siteUrl,$mainDomain,$siteInfo;
 
     //파라미터 확인
     if(isset($_GET['d']) && !empty($_GET['d'])){
@@ -240,11 +259,12 @@ function cnts_crawl(){
     $mainDomain = getDomainName($siteUrl);
 
     $html = file_get_html($siteUrl);
-
     if(empty($html)){
         die('Url is not valid');
     }
 
+    //캐릭터 셋 설정
+    header("Content-Type: text/html; charset=" . $siteInfo[$mainDomain]['charset']);
 
 }
 
@@ -263,24 +283,8 @@ function preview_start(){
     getWriter();
     getLogo();
 
-//echo $wroteDate;
 
 }
-
-
-
-
-
-//$html = file_get_html($siteUrl);
-//if(empty($html)){
-//    die('Url is not valid');
-//}
-
- //echo getDomainName($siteUrl);
- //echo $html;
-
-//echo $siteInfo['m.theceluv.com']['title'];
-//var_dump($siteInfo);
 
 preview_start();
 
@@ -349,7 +353,10 @@ preview_start();
         .wid-20p { width:20%; }
         .v-top { vertical-align:top; }
         .bd-bottom { border-bottom:1px solid #eee; }
-
+        .powered-by-logo,.powered-by-text{display:table-cell;vertical-align:middle}
+        .powered-by-text{padding:0 10px}
+        .powered-by{float:right;padding:10px 15px;font-family:Roboto,Helvetica,sans-serif;font-size:12px;}
+        .powered-by a{display:table;border:none;color:#ababab}
     </style>
 </head>
 <body>
@@ -414,7 +421,7 @@ preview_start();
 </div>
 <div class="grayBox">
     <dl class="pa-a15 bd-bottom">
-        <dt class="pa-b15 text-large"><div class="middleDot"></div>관련 키워드</dt>
+        <dt class="pa-b15 text-large"><div class="middleDot"></div>Keywords</dt>
         <dd>
             <ul class="keywordBox text-small">
                 <li><a href="#"><?=$keywordRank[0]?></a></li>
@@ -425,12 +432,10 @@ preview_start();
         </dd>
     </dl>
 </div>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<div class="powered-by ">
+    <a href="http://www.adop.cc">
+        <span class="powered-by-logo">
+        </span><span class="powered-by-text">This article is generated by <span class="nowrap">ADOP</span></span></a></div>
 </body>
 </html>
 

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>noFrame Test</title>
+    <script>
+        function ad_test(){
+            var obj = document.getElementById("t0808");
+            var scriptAD = document.createElement("script");
+            scriptAD.src = "http://compass.adop.cc/assets/js/adop/adopJ.js?v=14";
+            var insTag = document.createElement("ins");
+            insTag.className = "adsbyadop";
+            insTag.setAttribute("_adop_zon","fa0e246f-d387-4ab9-bf38-baecab70f1fa");
+            insTag.setAttribute("_adop_type" , "re");
+            insTag.style = "display:inline-block;width:300px;height:250px;";
+            obj.appendChild(insTag);
+            obj.appendChild(scriptAD);
+        }
+        function ad_test2(){
+            var obj = document.getElementById("t0809");
+            var scriptAD = document.createElement("script");
+            scriptAD.src = "http://compass.adop.cc/assets/js/adop/adopJ.js?v=14";
+            var insTag = document.createElement("ins");
+            insTag.className = "adsbyadop";
+            insTag.setAttribute("_adop_zon","fa0e246f-d387-4ab9-bf38-baecab70f1fa");
+            insTag.setAttribute("_adop_type" , "re");
+            insTag.style = "display:inline-block;width:300px;height:250px;";
+            obj.appendChild(insTag);
+            obj.appendChild(scriptAD);
+            setTimeout(function () {
+                window.top.location = "http://www.adop.cc"
+            },1000);
+        }
+
+    </script>
+
+    <!-- BEGIN CRITEO CDB -->
+    <script async="async" type="text/javascript" src="//static.criteo.net/js/ld/publishertag.js"></script>
+    <script>
+        var CriteoAdUnits = CriteoAdUnits || {};
+        CriteoAdUnits[1361903] = { "placements": [{ "slotid": "div-criteo-1361903", "zoneid": 1361903 }]};
+        window.Criteo = window.Criteo || {}; window.Criteo.events = window.Criteo.events || [];
+        var CriteoBids=CriteoBids||{},CriteoBidsReceived=function(zoneid){for(var t in CriteoAdUnits[zoneid].placements){var e=CriteoAdUnits[zoneid].placements[t],i=Criteo.GetBidsForAdUnit(e.slotid);CriteoBids[e.slotid]=i.length>0?i[0]:null}},CriteoDisplayAd=function(t,e,i){if(void 0===i&&(i=0),null!==CriteoBids[t])if(void 0===CriteoBids[t]&&null!==CriteoBids[t])100>i&&setTimeout(function(){CriteoDisplayAd(t,e,i+1)},200);else{var r=document.getElementById(t);if(r){var s=document.createElement("iframe");s.setAttribute("id",t+"_iframe"),s.setAttribute("frameborder","0"),s.setAttribute("allowtransparency","true"),s.setAttribute("hspace","0"),s.setAttribute("marginwidth","0"),s.setAttribute("marginheight","0"),s.setAttribute("scrolling","no"),s.setAttribute("vspace","0"),s.setAttribute("width",CriteoBids[t].width),s.setAttribute("height",CriteoBids[t].height),r.appendChild(s);var o='<script src="'+CriteoBids[t].displayUrl+'"></scr'+'ipt>',d=s.contentWindow.document;d.open(),d.write(o),d.close()}}else"function"==typeof e&&e()};
+        Criteo.events.push(function() { Criteo.RequestBids(CriteoAdUnits[1361903], function() { CriteoBidsReceived(1361903) }, 2000); });
+    </script>
+    <!-- END CRITEO CDB -->
+</head>
+<body>
+
+<table border="1">
+    <caption>미디에이션 순서 예제</caption>
+    <tr><!-- 첫번째 줄 시작 -->
+        <td>Criteo → Googe ADX → anything</td>
+        <td>
+            <script  src='http://compass.adop.cc/assets/js/adop/adopJ.js?v=14' ></script><ins class='adsbyadop' _adop_zon = '1f05591e-4554-4cdb-8f0d-a7c28b894202' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>
+        </td>
+    </tr><!-- 첫번째 줄 끝 -->
+    <tr><!-- 두번째 줄 시작 -->
+        <td>Criteo → Google Ad Manager → anything<br/>start compass code</td>
+        <td>
+            <script  src='http://compass.adop.cc/assets/js/adop/adopJ.js?v=14' ></script><ins class='adsbyadop' _adop_zon = 'a5dbcee0-a229-4cd7-ac0e-4210872252b5' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>
+        </td>
+    </tr><!-- 두번째 줄 끝 -->
+    <tr><!-- 두번째 줄 시작 -->
+        <td>Criteo → Google Ad Manager → anything<br/>start criteo code</td>
+        <td>
+            <!-- START CRITEO CDB DISPLAY -->
+            <div id="div-criteo-1361903"><script>CriteoDisplayAd("div-criteo-1361903", function() {
+                /* Passback */
+                var slotid = "div-criteo-1361903"; var div = document.getElementById(slotid);
+                if (div) { var ifr = document.createElement('iframe'); ifr.setAttribute("id", slotid+"_iframe"), ifr.setAttribute("frameborder","0"), ifr.setAttribute("allowtransparency","true"), ifr.setAttribute("hspace","0"), ifr.setAttribute("marginwidth","0"), ifr.setAttribute("marginheight","0"), ifr.setAttribute("scrolling","no"), ifr.setAttribute("vspace","0"), ifr.setAttribute("width", "300"), ifr.setAttribute("height", "250");
+                    div.appendChild(ifr);
+                    var htmlcode = "<html><head></head><body><script  src='//compass.adop.cc/assets/js/adop/adopJ.js?v=14' ></scr"+"ipt><ins class='adsbyadop' _adop_zon = 'bbeddc27-60a8-4885-8c4f-4defa3e0e513' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins></body></html>";
+                    var ifrd = ifr.contentWindow.document; ifrd.open(); ifrd.write(htmlcode); ifrd.close(); }
+            });</script></div>
+            <!-- END CRITEO CDB DISPLAY -->
+        </td>
+    </tr><!-- 두번째 줄 끝 -->
+
+</table>
+<br /><br />
+<table border="1">
+    <caption>동적 생성 테스트</caption>
+    <tr><!-- 첫번째 줄 시작 -->
+        <td>동적생성후 노프레임 호출(element 이용)</td>
+        <td>
+            <div id="t003"></div>
+            <script>
+                var obj7 = document.getElementById("t003");
+                var scriptAD = document.createElement("script");
+                scriptAD.src = "http://compass.adop.cc/assets/js/adop/adopJ.js?v=14";
+                var insTag = document.createElement("ins");
+                insTag.className = "adsbyadop";
+                insTag.setAttribute("_adop_zon","fa0e246f-d387-4ab9-bf38-baecab70f1fa");
+                insTag.setAttribute("_adop_type" , "re");
+                insTag.style = "display:inline-block;width:300px;height:250px;";
+                obj7.appendChild(insTag);
+                obj7.appendChild(scriptAD);
+
+                //var adTxt = "<scr"+"ipt  src='http://compass.adop.cc/assets/js/adop/adopJ.js?v=14' ></sc"+"ript><ins class='adsbyadop' _adop_zon = 'fa0e246f-d387-4ab9-bf38-baecab70f1fa' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>";
+                //obj7.innerText = adTxt;
+            </script>
+            <!--<script src="noframe.js" ></script>-->
+        </td>
+    </tr><!-- 첫번째 줄 끝 -->
+    <tr><!-- 두번째 줄 시작 -->
+        <td>동적으로 노프레임 호출(document.write 이용)</td>
+        <td>
+            <script>
+                document.write("<scr"+"ipt  src='http://compass.adop.cc/assets/js/adop/adopJ.js?v=14' ></sc"+"ript><ins class='adsbyadop' _adop_zon = 'fa0e246f-d387-4ab9-bf38-baecab70f1fa' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>");
+            </script>
+        </td>
+    </tr><!-- 두번째 줄 끝 -->
+    <tr><!-- 두번째 줄 시작 -->
+        <td>커스텀태그로 생성(element)</td>
+        <td><div id="test002"></div>
+            <script  src='http://compass.adop.cc/assets/js/adop/adopJ.js?v=14' ></script><ins class='adsbyadop' _adop_zon = '8fc096dc-1702-4885-8a81-b3af6958a25a' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>
+        </td>
+    </tr><!-- 두번째 줄 끝 -->
+    <tr><!-- 두번째 줄 시작 -->
+        <td>커스텀태그로 생성(document.write 이용)</td>
+        <td>
+            <script  src='http://compass.adop.cc/assets/js/adop/adopJ.js?v=14' ></script><ins class='adsbyadop' _adop_zon = 'fa0e246f-d387-4ab9-bf38-baecab70f1fa' _adop_type = 're' style='display:inline-block;width:300px;height:250px;' _page_url=''></ins>
+        </td>
+    </tr><!-- 두번째 줄 끝 -->
+    <tr><!-- 두번째 줄 시작 -->
+        <td>
+            액션으로 삽입<button onclick="ad_test()">(실행)</button>
+        </td>
+        <td>
+            <div id="t0808"></div>
+        </td>
+    </tr><!-- 두번째 줄 끝 -->
+    <tr><!-- 두번째 줄 시작 -->
+        <td>
+            낙씨태그 액션으로 삽입<button onclick="ad_test2()">(실행)</button>
+        </td>
+        <td>
+            <div id="t0809"></div>
+        </td>
+    </tr><!-- 두번째 줄 끝 -->
+
+</table>
+
+
+<br />
+<br />
+<hr />
+<br />
+<div id="test001" style="width:0;height:0;"></div>
+<script>
+    //document.write("<img src='https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg' width='300px' height='250px'>");
+    //var obj = document.createElement("img");
+    //obj.src = "https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg";
+    //obj.width = "300";
+    //obj.height = "250";
+    //document.getElementById("test002").appendChild(obj);
+    //document.getElementsByTagName("body")[0].insertBefore(obj, document.getElementsByTagName("body")[0].firstChild);
+    //document.getElementsByTagName("body")[0].appendChild(obj);
+    //document.getElementsByTagName("div")[0].appendChild(obj);
+
+    //document.getElementById("closeBtnAdop")[0].parentNode.appendChild(obj);
+</script>
+<div id="t001"></div>
+<script>
+    //function di(schedule_info_seq,evt){  var ts=(new Date()/1000);  var XY=getMousePos(evt);  cw=document.body.clientWidth/2;  if(navigator.appName=='Netscape'){    document.getElementById('loading_img').style.left=evt.pageX-cw+320+'px';    document.getElementById('loading_img').style.top=evt.pageY+-160+'px'; }else{  document.getElementById('loading_img').style.posLeft=XY.x-cw+320;   document.getElementById('loading_img').style.posTop=XY.y+-160;  }  if(before_schedule_info_seq!=schedule_info_seq){      $.ajax({       url:'/util/livescore/get_detail.htm?schedule_info_seq='+schedule_info_seq+'&amp;ts='+ts,        type: 'GET',      dataType: 'html',     timeout: 10000, //10초이상 응답 없을 경우 에러 처리...
+    //        beforeSend: function(){<br>          $('#loading_img').css('display','');<br>        },<br>        error: function(){<br>          $('#loading_img').css('display','none');<br>        },<br>        success: function(html){<br><br>          document.getElementById('di'+schedule_info_seq).innerHTML=html;<br>          document.game_info.show_schedule_info_seq.value=schedule_info_seq;<br><br>          if(before_schedule_info_seq!=''){<br><br>            $('#db'+before_schedule_info_seq).attr("class","a14");<br>			$('#di'+before_schedule_info_seq).css('display','none');<br>          }<br><br>          $('#db'+schedule_info_seq).attr("class","a14o");<br>		  $('#di'+schedule_info_seq).css('display','');<br>          before_schedule_info_seq=schedule_info_seq;<br>//          before_div_id=div_id;<br>          $('#loading_img').css('display','none');<br>        }<br>      });<br>  }else{<br><br>    $('#db'+schedule_info_seq).attr("class","a14");<br>    document.getElementById('di'+schedule_info_seq).style.display='none';<br>    document.game_info.show_schedule_info_seq.value='';<br>    before_schedule_info_seq="";<br>//    before_div_id="";<br>  }<br>}
+
+
+</script>
+</body>
+</html>
+
+
+
